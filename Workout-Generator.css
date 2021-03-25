@@ -1,0 +1,41 @@
+body{
+    background-color: white;
+    color:black;
+}
+.dark-mode{
+    background-color: black;
+    color:white;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+
+}
+.header img{
+    max-width: 60%;
+    height:auto;
+}
+main{
+    font-family: cursive;
+    margin-left:10em;
+    margin-right:10em;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+
+}
+.main span{
+    font-size: large;
+
+}
+.main fieldset{
+
+}
+.main legend{
+    font-style: italic;
+}
+.main label{
+
+
+}

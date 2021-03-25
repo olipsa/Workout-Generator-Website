@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout generator</title>
+    <link rel="stylesheet" href="Workout-Generator.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="https://i.pinimg.com/originals/93/ed/17/93ed175d22fa85e009e67c18963ccb94.jpg" alt="nature" >
+</header>
+<button type="button" onclick="myFunction()">Switch to dark mode</button>
+<main class="main">
+    <span><br>In order to see recommended workouts, please let us know:</span>
+    <form method="post">
+        <fieldset>
+            <legend><br>What is your activity level?</legend>
+            <label><input type="radio" name="radio" value="sedentary"> Sedentary</label>
+            <label><input type="radio" name="radio" value="somewhat active"> Somewhat active</label>
+            <label><input type="radio" name="radio" value="active"> Active</label>
+            <label><input type="radio" name="radio" value="very active"> Very active</label>
+        </fieldset>
+        <fieldset >
+            <legend><br>What type of workouts do you prefer? </legend>
+            <label><input type="checkbox" name="checkbox" value="leg"> Leg Workout</label>
+            <label><input type="checkbox" name="checkbox" value="arm"> Arm Workout</label>
+            <label><input type="checkbox" name="checkbox" value="abs"> Abs Workout</label>
+            <label><input type="checkbox" name="checkbox" value="butt"> Butt Workout</label>
+        </fieldset>
+        <br><button type="submit" >Generate personalised workout</button>
+
+    </form>
+</main>
+<script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        var btn=document.getElementById("button");
+        if(btn.innerHTML==="Switch to dark mode")
+            btn.innerHTML="Switch to light mode";
+        else
+            btn.innerHTML="Switch to dark mode";
+    }
+</script>
+
+</body>
+
+</html>
