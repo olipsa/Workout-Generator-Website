@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="Workout-Generator.css">
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
 </head>
-<body>
+<body class="body">
 <header class="header">
     <section class="top-menu">
         <p>Here we will set login/logout button, FAQ, Contact support and a logo</p>
-        <button type="button" class="button" id="dark-mode-btn" onclick="myFunction()">Switch to<br> dark mode</button>
+        <button type="button" class="button" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
     </section>
     <section class="image">
         <img class="workout-image" src="https://www.goldsgym.com/wp-content/uploads/sites/1/2018/12/dumbell.jpg" alt="workout" >
@@ -37,13 +37,14 @@
                 <label><input type="checkbox" name="checkbox" value="butt"> Butt Workout</label>
                 <label><input type="checkbox" name="checkbox" value="butt"> Full Body Workout</label>
             </fieldset>
-            <br><button type="submit" class="button" >Generate personalised workout</button>
+            <br><button type="submit" class="button" onclick="removeElements();loading()">Generate personalised workout</button>
         </form>
     </section>
 </main>
 <footer class="footer">This is the footer</footer>
+<section id="loader" class="loader" style="display:none;" onload="loading() "></section>
 <script>
-    function myFunction() {
+    function switchTheme() {
 
         const body = document.body;
         const topMenu=body.querySelector('.top-menu');
@@ -75,7 +76,29 @@
             btn.innerHTML="Switch to<br> light mode";
         else
             btn.innerHTML="Switch to<br> dark mode";
+
     }
+    function removeElements(){
+
+        let thingToRemove = document.querySelectorAll(".header")[0];
+        thingToRemove.parentNode.removeChild(thingToRemove);
+
+        thingToRemove = document.querySelectorAll(".main")[0];
+        thingToRemove.parentNode.removeChild(thingToRemove);
+
+        thingToRemove = document.querySelectorAll(".footer")[0];
+        thingToRemove.parentNode.removeChild(thingToRemove);
+    }
+    function loading() {
+        document.getElementById("loader").style.display="block";
+        setTimeout(showWorkout, 1000);
+    }
+    function showWorkout() {
+        let loader=document.querySelector(".loader");
+        loader.parentNode.removeChild(loader);
+        window.location='Available-Workouts.html';
+    }
+
 </script>
 
 </body>
