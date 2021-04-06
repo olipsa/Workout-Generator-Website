@@ -9,51 +9,96 @@
 </head>
 
 <body>
-    <section>
-        <header class="menu_bar row">
-            <a href="homepage.html" class="site-logo">
-                <img src="logo.png" alt="logo">
-            </a>
-            <nav class="header-nav">
-                <ul role="menu">
-                    <li role="menuitem" class="leaderboard">
-                        <a href="leaderboard.html">Leaderboard</a>
-                    </li>
-                    <li role="menuitem" class="faq">
-                        <a href="faq.html">FAQ</a>
-                    </li>
-                    <li role="menuitem" class="support">
-                        <a href="support.html">Support</a>
-                    </li>
-                    <li role="menuitem" class="signUp">
-                        <a href="register.html">Sign Up</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="menu_button">
-                <svg height="24" width="24" viewBox="0 0 24 24">
-                    <path d="M2 13V11H22V13H2ZM2 19V17H22V19H2ZM2 7V5H22V7H2Z"></path>
-                </svg>
-                <span>Menu</span>
-            </button>
-        </header>
-        <main>
-            <div>
-                <p>Start your journey to a better you</p>
-                <span>
+<div>
+    <header class="menu_bar row">
+        <a href="homepage.html" class="site-logo">
+            <img src="logo.png" alt="logo">
+        </a>
+        <nav class="header-nav">
+            <ul role="menu">
+                <li role="menuitem" class="leaderboard">
+                    <a href="leaderboard.html">Leaderboard</a>
+                </li>
+                <li role="menuitem" class="faq">
+                    <a href="faq.html">FAQ</a>
+                </li>
+                <li role="menuitem" class="support">
+                    <a href="support.html">Support</a>
+                </li>
+                <li role="menuitem" class="signUp">
+                    <a href="register.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="sidebar" class="sidebar">
+            <ul role="menu">
+                <li role="menuitem" class="leaderboard">
+                    <a href="leaderboard.html">Leaderboard</a>
+                </li>
+                <li role="menuitem" class="faq">
+                    <a href="faq.html">FAQ</a>
+                </li>
+                <li role="menuitem" class="support">
+                    <a href="support.html">Support</a>
+                </li>
+                <li role="menuitem" class="signUp">
+                    <a href="register.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <button class="menu_button">
+            <svg height="24" width="24" viewBox="0 0 24 24">
+                <path d="M2 13V11H22V13H2ZM2 19V17H22V19H2ZM2 7V5H22V7H2Z"></path>
+            </svg>
+            <span onclick="openNav()">Menu</span>
+        </button>
+    </header>
+</div>
+<main>
+    <div>
+        <div>
+            <p>Start your journey to a better you</p>
+            <span>
                     Generate workouts based on your needs
                 </span>
-                <div>
-                    <button class="sign_up_button">
-                        <a href="register.html" class="button">Sign Up</a>
-                    </button>
-                </div>
+            <div>
+                <button onclick="location.href='register.html'" type="button">
+                    Sign Up
+                </button>
             </div>
-        </main>
-        <footer>
-
-        </footer>
+        </div>
+    </div>
+    <section class="motivation_section">
+        <div>
+            <p>
+                Generate custom workouts tailored to your personal needs.
+            </p>
+            <ul>
+                <li>Change your lifestyle</li>
+                <li>reach your goal form</li>
+                <li>join a worldwide community</li>
+            </ul>
+        </div>
+        <div>
+            <img src="logo.png" alt="figure1">
+        </div>
     </section>
+
+</main>
+<footer>
+
+</footer>
+
+<script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+
 </body>
 
 </html>
