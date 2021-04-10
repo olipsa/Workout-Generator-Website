@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+header,body, ul{
     background-color: #24252A;
 }
 
-li, a, button {
+li, a, button, p, h1, .copyright{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: #D3D3D3;
     text-decoration: none;
+}
+
+h1 {
+    font-size: 32px;
 }
 
 header {
@@ -45,7 +52,7 @@ header {
 
 .menu_button{
     padding: 1vh 1vh;
-    background-color: rgba(242,111,109,1);
+    background-color: rgba(238,28,80,1);
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -54,26 +61,40 @@ header {
 }
 
 .menu_button:hover{
-    background-color: rgba(238,28,80,1);
+    background-color: rgba(242,111,109,1);
 }
 
-.bgtext{
-    position: absolute;
-    z-index: 100;
-
-}
-
-.bgimage{
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+.hero_container{
     display: block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.hero_overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.bgimage_overlay{
-    background-color: rgba(31, 31, 31, 0.7);
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.hero_image {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+
 }
+
+.crop_container{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
