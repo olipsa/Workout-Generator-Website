@@ -6,11 +6,53 @@
     <link rel="stylesheet" href="Available-Workouts.css">
 </head>
 <body class="body">
+
 <header class="header">
         <p>Here we will set login/logout button, FAQ, Contact support and a logo</p>
         <button type="button" class="button" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
 </header>
 
+<main class="main">
+    <img src="at-home-bootcamp.svg" alt="at-home-bootcamp">At Home Bootcamp
+</main>
 
+
+
+<script>
+    function switchTheme() {
+
+        const body = document.body;
+        const topMenu=body.querySelector('.header');
+        /*const img=body.querySelector('.image');
+        const main=body.querySelector('.main');
+        const form1=body.querySelector('.form-generator');
+        const form2=body.querySelector('.form-question');
+        const form3=body.querySelector('.form-background');
+        const form4=body.querySelector('.form-fields1');
+        const form5=body.querySelector('.form-fields2');*/
+        const btn=body.querySelector('.header .button');
+        //const btn2=body.querySelector('.form-background .button');
+        //const footer=body.querySelector('.footer');
+
+        body.classList.toggle("dark-mode");
+        topMenu.classList.toggle("dark-mode-header");
+        /*img.classList.toggle("dark-mode-image");
+        main.classList.toggle("dark-mode");
+        form1.classList.toggle("dark-mode-form-container");
+        form2.classList.toggle("dark-mode-form");
+        form3.classList.toggle("dark-mode-form");
+        form4.classList.toggle("dark-mode-form");
+        form5.classList.toggle("dark-mode-form");*/
+        btn.classList.toggle("dark-mode-button");
+        //btn2.classList.toggle("dark-mode-button");
+        //footer.classList.toggle("dark-mode-header");
+
+        if(btn.innerHTML==="Switch to<br> dark mode")
+            btn.innerHTML="Switch to<br> light mode";
+        else
+            btn.innerHTML="Switch to<br> dark mode";
+
+    }
+</script>
 </body>
 </html>

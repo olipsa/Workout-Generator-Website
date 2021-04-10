@@ -39,3 +39,34 @@ header{
     outline: none;
     box-shadow: none;
 }
+main{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.main img{
+    height: 30vh;
+    width: auto;
+
+}
+.dark-mode{
+    background-color: #18191A;
+    color:white;
+}
+.dark-mode-header{
+    background-color: #3A3B3C;
+    border: 2px solid #3A3B3C;
+    border-radius: 18px;
+    box-shadow: 1px 1px 18px #18191A;
+
+}
+.dark-mode-button{
+    background-color: #151515;
+    border:2px solid #151515;
+    border-radius: 10px;
+
+}
+.dark-mode-button:hover{
+    background-color: #fa17a7;
+    border:2px solid #b01079;
+    border-radius:10px;
+}
