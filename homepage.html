@@ -5,176 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
-    <title>Home | WorkoutGenerator</title>
+    <title>Home | Fitter</title>
 </head>
 
 <body>
-<div>
-    <header class="menu_bar row">
-        <a href="homepage.html" class="site-logo">
-            <img src="logo.png" alt="logo">
-        </a>
-        <nav class="header-nav">
-            <ul role="menu">
-                <li role="menuitem" class="leaderboard">
-                    <a href="leaderboard.html">Leaderboard</a>
-                </li>
-                <li role="menuitem" class="faq">
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <li role="menuitem" class="support">
-                    <a href="support.html">Support</a>
-                </li>
-                <li role="menuitem" class="signUp">
-                    <a href="register.html">Sign Up</a>
-                </li>
-            </ul>
-        </nav>
-        <div id="sidebar" class="sidebar">
-            <ul role="menu">
-                <li role="menuitem" class="leaderboard">
-                    <a href="leaderboard.html">Leaderboard</a>
-                </li>
-                <li role="menuitem" class="faq">
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <li role="menuitem" class="support">
-                    <a href="support.html">Support</a>
-                </li>
-                <li role="menuitem" class="signUp">
-                    <a href="register.html">Sign Up</a>
-                </li>
-            </ul>
-        </div>
+<header class="menu_bar">
+    <a href="homepage.html" class="site-logo">
+        <img src="logo_dark_mode.png" alt="logo" width="200">
+    </a>
+    <nav class="menu">
+        <ul role="menu">
+            <li role="menuitem">
+                <a href="leaderboard.html">Leaderboard</a>
+            </li>
+            <li role="menuitem">
+                <a href="faq.html">FAQ</a>
+            </li>
+            <li role="menuitem">
+                <a href="support.html">Support</a>
+            </li>
+            <li role="menuitem">
+                <a href="login.html">Log In</a>
+            </li>
+        </ul>
+    </nav>
+    <a href="register.html">
         <button class="menu_button">
-            <svg height="24" width="24" viewBox="0 0 24 24">
-                <path d="M2 13V11H22V13H2ZM2 19V17H22V19H2ZM2 7V5H22V7H2Z"></path>
-            </svg>
-            <span onclick="openNav()">Menu</span>
+            Sign Up
         </button>
-    </header>
-</div>
+    </a>
+</header>
 <main>
-    <div>
+    <div class="bg_container">
         <div>
+            <div class="bgimage_overlay"></div>
+            <img class="bgimage" src="bgimage.jpg" alt="background" width="1920" height="1080">
+        </div>
+        <div class="bgtext">
             <p>Start your journey to a better you</p>
             <span>
-                    Generate workouts based on your needs
-                </span>
+            Generate workouts based on your needs
+        </span>
             <div>
                 <button onclick="location.href='register.html'" type="button">
-                    Sign Up
+                    Get Started
                 </button>
             </div>
         </div>
     </div>
-    <section class="motivation_section">
-        <div>
-            <p>
-                Generate custom workouts tailored to your personal needs.
-            </p>
-            <ul>
-                <li>Change your lifestyle</li>
-                <li>reach your goal form</li>
-                <li>join a worldwide community</li>
-            </ul>
-        </div>
-        <div>
-            <img src="workout.svg" alt="workout">
-        </div>
-    </section>
-    <section class="benefits_section">
-        <div>
-            <img src="energizer.svg" alt="energizer">
-        </div>
-        <div>
-            <h1>
-                What's best for you, and your preferences
-            </h1>
-            <p>Enter your personal details and your workout preferences
-                regarding the parts of your body you want to work on and
-                we'll get you a tailor-made workout plan just for you.
-            </p>
-        </div>
-    </section>
-    <section class="support_section">
-        <div>
-            <h1>
-                Check out our community posts
-            </h1>
-            <p>
-                We regularly provide our users with articles regarding
-                healthy living, tips and tricks. Make sure to check out
-                our newsletter so that you're up-to-date with our projects.
-            </p>
-        </div>
-        <div>
-            <img src="lifestyle.svg" alt="lifestyle">
-        </div>
-    </section>
+</main><!--
+<section class="motivation_section">
+    <div>
+        <p>
+            Generate custom workouts tailored to your personal needs.
+        </p>
+        <ul>
+            <li>Change your lifestyle</li>
+            <li>reach your goal form</li>
+            <li>join a worldwide community</li>
+        </ul>
+    </div>
+    <div>
+        <img src="workout.svg" alt="workout" width="301" height="274">
+    </div>
+</section>
+<section class="benefits_section">
+    <div>
+        <img src="energizer.svg" alt="energizer" width="301" height="274">
+    </div>
+    <div>
+        <h1>
+            What's best for you, and your preferences
+        </h1>
+        <p>Enter your personal details and your workout preferences
+            regarding the parts of your body you want to work on and
+            we'll get you a tailor-made workout plan just for you.
+        </p>
+    </div>
+</section>
+<section class="support_section">
+    <div>
+        <h1>
+            Check out our community posts
+        </h1>
+        <p>
+            We regularly provide our users with articles regarding
+            healthy living, tips and tricks. Make sure to check out
+            our newsletter so that you're up-to-date with our projects.
+        </p>
+    </div>
+    <div>
+        <img src="lifestyle.svg" alt="lifestyle" width="301" height="274">
+    </div>
+</section>
 </main>
 <footer>
-    <div>
-        <nav>
-            <ul role="menu">
-                <li>
-                    <h4>Discover Fitter</h4>
-                </li>
-                <li>
-                    <p>About us</p>
-                </li>
-                <li>
-                    <p>Newsletter</p>
-                </li>
-                <li>
-                    <p>Careers</p>
-                </li>
-                <li>
-                    <p>Sign Up</p>
-                </li>
-                <li>
-                    <p>FAQ</p>
-                </li>
-                <li>
-                    <p>Support</p>
-                </li>
-            </ul>
-            <ul role="menu">
-                <li>
-                    <h4>Legal</h4>
-                </li>
-                <li>
-                    <p>Terms and Conditions</p>
-                </li>
-                <li>
-                    <p>Privacy</p>
-                </li>
-                <li>
-                    <p>Cookies</p>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div>
-        <ul class="socials">
-            <li role="option"><a href="https://www.instagram.com/vaasxo/">Instagram</a></li>
-            <li role="option"><a href="https://www.facebook.com/vaasxo/">Facebook</a></li>
+<div>
+    <nav>
+        <ul role="menu">
+            <li>
+                <h4>Discover Fitter</h4>
+            </li>
+            <li>
+                <p>About us</p>
+            </li>
+            <li>
+                <p>Newsletter</p>
+            </li>
+            <li>
+                <p>Careers</p>
+            </li>
+            <li>
+                <p>Sign Up</p>
+            </li>
+            <li>
+                <p>FAQ</p>
+            </li>
+            <li>
+                <p>Support</p>
+            </li>
         </ul>
-        <span class="copyright">© 2021 Ondina Lipsa, Radu Deleanu, Alexandra Spanache</span>
-    </div>
+        <ul role="menu">
+            <li>
+                <h4>Legal</h4>
+            </li>
+            <li>
+                <p>Terms and Conditions</p>
+            </li>
+            <li>
+                <p>Privacy</p>
+            </li>
+            <li>
+                <p>Cookies</p>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+    <ul class="socials">
+        <li role="option"><a href="https://www.instagram.com/vaasxo/">Instagram</a></li>
+        <li role="option"><a href="https://www.facebook.com/vaasxo/">Facebook</a></li>
+    </ul>
+    <span class="copyright">© 2021 Ondina Lipsa, Radu Deleanu, Alexandra Spanache</span>
+</div>
 
 </footer>
 
 <script>
-    function openNav() {
-        document.getElementById("sidebar").style.width = "250px";
-    }
+function openNav() {
+    document.getElementById("sidebar").style.width = "250px";
+}
 
-    function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-    }
-</script>
+function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+}
+</script>-->
 
 </body>
 
 </html>
+
