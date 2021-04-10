@@ -9,12 +9,26 @@
 <body class="body">
 <header class="header">
     <section class="top-menu">
-        <p>Here we will set login/logout button, FAQ, Contact support and a logo</p>
-        <button type="button" class="button" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
-    </section>
-    <section class="image">
-        <img class="workout-image" src="https://www.goldsgym.com/wp-content/uploads/sites/1/2018/12/dumbell.jpg" alt="workout" >
-        <h1>Want some personalized workout?<br> You've come to the right place!</h1>
+        <a href="homepage.html" class="site-logo">
+            <img src="logo_dark_mode.png" alt="logo" >
+        </a>
+        <nav class="menu">
+            <ul role="menu">
+                <li role="menuitem">
+                    <a href="leaderboard.html">Leaderboard</a>
+                </li>
+                <li role="menuitem">
+                    <a href="faq.html">FAQ</a>
+                </li>
+                <li role="menuitem">
+                    <a href="support.html">Support</a>
+                </li>
+                <li role="menuitem">
+                    <a href="login.html">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="profile-picture" onclick="showMenu()"></button>
     </section>
 </header>
 
@@ -40,42 +54,63 @@
             <br><button type="submit" class="button" onclick="removeElements();loading()">Generate personalised workout</button>
         </form>
     </section>
+    <button type="button" class="dark-mode-btn" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
 </main>
 <footer class="footer">This is the footer</footer>
-<section id="loader" class="loader" style="display:none;" onload="loading() "></section>
+<section id="loader" class="loader" onload="loading() "></section>
+<section class="profile-menu" id="profile-menu">
+    <nav class="menu">
+        <ul role="menu" class="menu">
+            <li role="menuitem">
+                <a href="leaderboard.html">Signed in as Kate</a>
+            </li>
+            <li role="menuitem">
+                <a href="faq.html">News</a>
+            </li>
+            <li role="menuitem">
+                <a href="support.html">Statistics</a>
+            </li>
+            <li role="menuitem">
+                <a href="Workout-Generator.html">Workout generator</a>
+            </li>
+            <li role="menuitem">
+                <a href="Available-Workouts.html">Available Workouts</a>
+            </li>
+            <li role="menuitem">
+                <a href="login.html">Achievements</a>
+            </li>
+        </ul>
+    </nav>
+</section>
 <script>
     function switchTheme() {
 
         const body = document.body;
-        const topMenu=body.querySelector('.top-menu');
-        const img=body.querySelector('.image');
         const main=body.querySelector('.main');
-        const form1=body.querySelector('.form-generator');
-        const form2=body.querySelector('.form-question');
-        const form3=body.querySelector('.form-background');
+        const form1=body.querySelector('.main .form-generator');
+        const form2=body.querySelector('.main .form-question');
+        const form3=body.querySelector('.main .form-background');
         const form4=body.querySelector('.form-fields1');
         const form5=body.querySelector('.form-fields2');
-        const btn=body.querySelector('.top-menu .button');
         const btn2=body.querySelector('.form-background .button');
+        const btn3=body.querySelector('.main .dark-mode-btn');
         const footer=body.querySelector('.footer');
 
         body.classList.toggle("dark-mode");
-        topMenu.classList.toggle("dark-mode-header");
-        img.classList.toggle("dark-mode-image");
         main.classList.toggle("dark-mode");
         form1.classList.toggle("dark-mode-form-container");
         form2.classList.toggle("dark-mode-form");
         form3.classList.toggle("dark-mode-form");
         form4.classList.toggle("dark-mode-form");
         form5.classList.toggle("dark-mode-form");
-        btn.classList.toggle("dark-mode-button");
         btn2.classList.toggle("dark-mode-button");
+        btn3.classList.toggle("dark-mode-button");
         footer.classList.toggle("dark-mode-header");
 
-        if(btn.innerHTML==="Switch to<br> dark mode")
-            btn.innerHTML="Switch to<br> light mode";
-        else
-            btn.innerHTML="Switch to<br> dark mode";
+        if(btn3.innerHTML==="Switch to<br> dark mode")
+            btn3.innerHTML="Switch to<br> light mode";
+        else if(btn3.innerHTML==="Switch to<br> light mode")
+            btn3.innerHTML="Switch to<br> dark mode";
 
     }
     function removeElements(){
@@ -97,6 +132,14 @@
         let loader=document.querySelector(".loader");
         loader.parentNode.removeChild(loader);
         window.location='Available-Workouts.html';
+    }
+    function showMenu(){
+        let menuStyle=document.getElementById("profile-menu").style.display;
+        if(menuStyle==="flex")
+            document.getElementById("profile-menu").style.display="none";
+        else
+            document.getElementById("profile-menu").style.display="flex";
+
     }
 
 </script>
