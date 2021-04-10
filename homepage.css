@@ -170,7 +170,8 @@ header {
 }
 
 .copyright_text{
-    color: rgba(114,115,115,0.73);
+    color: #888888;
+    font-size: 0.8em;
 }
 
 
