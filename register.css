@@ -91,6 +91,7 @@ section {
 
 .container_register{
     width: 25vw;
+    height: auto;
     background: transparent;
     position: relative;
 }
@@ -147,8 +148,8 @@ input {
     padding-top: 1em;
 }
 
-.login_button{
-    font-size: 2em;
+.register_button{
+    font-size: 2vw;
     color: #f6f5f5;
     display: flex;
     justify-content: center;

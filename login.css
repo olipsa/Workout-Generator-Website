@@ -12,7 +12,7 @@ header,body,ul{
 li, a, button, p, span, h1, label, .TOS{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1rem;
     color: #f6f5f5;
     text-decoration: none;
 }
@@ -36,6 +36,15 @@ header {
     padding: 1vh 5vh 0;
 }
 
+input {
+    outline: none;
+    border: none;
+}
+
+section {
+    display: block;
+}
+
 .button_and_logo{
     display: flex;
     justify-content: space-between;
@@ -44,10 +53,6 @@ header {
 
 .site-logo{
     cursor: pointer;
-}
-
-section {
-    display: block;
 }
 
 .menu_button{
@@ -135,11 +140,6 @@ section {
     padding: 0 20px 0 38px;
 }
 
-input {
-    outline: none;
-    border: none;
-}
-
 .options{
     font-size: 1em;
     display: flex;
@@ -156,7 +156,7 @@ input {
 }
 
 .login_button{
-    font-size: 2em;
+    font-size: 2vw;
     color: #f6f5f5;
     display: flex;
     justify-content: center;
