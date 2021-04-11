@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 header,body,ul{
     background-color: #24252A;
@@ -49,6 +48,10 @@ header {
 
 .menu li a{
     transition: all 0.3s ease 0s;
+}
+
+section {
+    display: block;
 }
 
 .menu li a:hover{
@@ -132,6 +135,121 @@ header {
 
 .get_started:hover{
     background-color: rgba(242,111,109,1);
+}
+
+.motivation_section{
+    background: #fff;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.row--apply {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 1rem;
+}
+
+.motivation_container p, .motivation_container li{
+    color: #24252A;
+}
+
+.motivation_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.motivation_text ul, .motivation_text p{
+    width: 70%;
+    background: transparent;
+}
+
+.motivation_text p{
+    padding-bottom: 1.3em;
+}
+
+.motivation_text li{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.motivation_img img{
+    width: 400px;
+    height: auto;
+}
+
+.benefits_section{
+    background: #24252A;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.benefits_container h1, .benefits_text p{
+    color: #fff;
+}
+
+.benefits_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits_img img{
+    height: 300px;
+    width: auto;
+}
+
+.benefits_text h1, .benefits_text p{
+    width: 70%;
+    background: transparent;
+}
+
+.benefits_text p{
+    padding-bottom: 1.3em;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.support_section{
+    background: #fff;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.support_container p, .support_container h1{
+    color: #24252A;
+}
+
+.support_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.support_text h1, .support_text p{
+    width: 60%;
+    background: transparent;
+}
+
+.support_text p{
+    padding-bottom: 1.3em;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.support_img img{
+    width: 400px;
+    height: auto;
 }
 
 .footer_container{
