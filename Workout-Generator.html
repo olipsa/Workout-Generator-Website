@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Workout generator</title>
     <link rel="stylesheet" href="Workout-Generator.css">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
 </head>
 <body class="body">
 <header class="header">
@@ -24,7 +23,7 @@
                     <a href="support.html">Support</a>
                 </li>
                 <li role="menuitem">
-                    <a href="login.html">Log Out</a>
+                    <a href="homepage.html">About Us</a>
                 </li>
             </ul>
         </nav>
@@ -38,25 +37,55 @@
         <form method="post" class="form-background">
             <fieldset class="form-fields1">
                 <legend><br>What is your activity level?</legend>
-                <label><input type="radio" name="radio" value="sedentary"> Sedentary</label>
-                <label><input type="radio" name="radio" value="somewhat active"> Somewhat active</label>
-                <label><input type="radio" name="radio" value="active"> Active</label>
-                <label><input type="radio" name="radio" value="very active"> Very active</label>
+                <label class="radio-container">Sedentary<input type="radio" name="radio" value="sedentary"><span class="radio-checkmark"></span> </label>
+                <label class="radio-container">Somewhat active<input type="radio" name="radio" value="somewhat active"><span class="radio-checkmark"></span>  </label>
+                <label class="radio-container">Active<input type="radio" name="radio" value="active"><span class="radio-checkmark"></span>  </label>
+                <label class="radio-container">Very active<input type="radio" name="radio" value="very active"><span class="radio-checkmark"></span>  </label>
             </fieldset>
             <fieldset class="form-fields2">
                 <legend><br>What type of workouts do you prefer? </legend>
-                <label><input type="checkbox" name="checkbox" value="leg"> Leg Workout</label>
-                <label><input type="checkbox" name="checkbox" value="arm"> Arm Workout</label>
-                <label><input type="checkbox" name="checkbox" value="abs"> Abs Workout</label>
-                <label><input type="checkbox" name="checkbox" value="butt"> Butt Workout</label>
-                <label><input type="checkbox" name="checkbox" value="butt"> Full Body Workout</label>
+                <label class="checkbox-container">Arm Workout<input type="checkbox" name="checkbox" value="arm"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Leg Workout<input type="checkbox" name="checkbox" value="leg"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Abdominal Workout<input type="checkbox" name="checkbox" value="abs"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Chest Workout<input type="checkbox" name="checkbox" value="chest"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Full Body Workout<input type="checkbox" name="checkbox" value="full"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Back Workout<input type="checkbox" name="checkbox" value="back"><span class="checkbox-checkmark"></span></label>
+                <label class="checkbox-container">Shoulders Workout<input type="checkbox" name="checkbox" value="shoulders"><span class="checkbox-checkmark"></span></label>
             </fieldset>
             <br><button type="submit" class="button" onclick="removeElements();loading()">Generate personalised workout</button>
         </form>
     </section>
     <button type="button" class="dark-mode-btn" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
 </main>
-<footer class="footer">This is the footer</footer>
+<footer>
+    <div class="footer_container">
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <h1>Discover Fitter</h1>
+                <a href="#">About us</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Careers</a>
+                <a href="#">Sign Up</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-heading footer-2">
+                <h1>Legal</h1>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-heading footer-3">
+                <h1>Socials</h1>
+                <a href="https://www.instagram.com/vaasxo/">Instagram</a>
+                <a href="https://www.facebook.com/vaasxo/">Facebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright_container">
+        <span class="copyright_text">© 2021 Ondina Lipsa, Radu Deleanu, Alexandra Spanache</span>
+    </div>
+</footer>
 <section id="loader" class="loader" onload="loading() "></section>
 <section class="profile-menu" id="profile-menu">
     <nav class="menu">
@@ -79,6 +108,9 @@
             <li role="menuitem">
                 <a href="login.html">Achievements</a>
             </li>
+            <li role="menuitem">
+                <a href="login.html">Log out</a>
+            </li>
         </ul>
     </nav>
 </section>
@@ -94,7 +126,6 @@
         const form5=body.querySelector('.form-fields2');
         const btn2=body.querySelector('.form-background .button');
         const btn3=body.querySelector('.main .dark-mode-btn');
-        const footer=body.querySelector('.footer');
 
         body.classList.toggle("dark-mode");
         main.classList.toggle("dark-mode");
@@ -105,7 +136,6 @@
         form5.classList.toggle("dark-mode-form");
         btn2.classList.toggle("dark-mode-button");
         btn3.classList.toggle("dark-mode-button");
-        footer.classList.toggle("dark-mode-header");
 
         if(btn3.innerHTML==="Switch to<br> dark mode")
             btn3.innerHTML="Switch to<br> light mode";
@@ -123,6 +153,13 @@
 
         thingToRemove = document.querySelectorAll(".footer")[0];
         thingToRemove.parentNode.removeChild(thingToRemove);
+
+        thingToRemove = document.querySelectorAll(".copyright_container")[0];
+        thingToRemove.remove();
+
+        thingToRemove= document.querySelectorAll(".profile-menu")[0];
+        thingToRemove.remove();
+
     }
     function loading() {
         document.getElementById("loader").style.display="block";

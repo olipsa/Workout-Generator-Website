@@ -6,7 +6,7 @@ html, body {
 
 
 }
-li, a, button {
+li, a, button,h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2vh;
@@ -16,7 +16,7 @@ li, a, button {
 body{
 
     font-family: Verdana;
-    background-color: white;
+    background-color: #24252A;
     color:black;
 }
 .top-menu{
@@ -48,13 +48,18 @@ body{
 .profile-menu{
     display: none;
     border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 32px;
     background-color:#24252A;
+    opacity: 0.9;
     position: absolute;
     bottom:68vh;
     right: 3em;
 
 
+}
+.profile-menu:before{
+    border: 8px solid transparent;
+    border-bottom: 8px solid #24252A;
 }
 .profile-menu .menu{
     display: flex;
@@ -75,6 +80,19 @@ ul.menu {
 .profile-menu li a:hover{
     color: #F26F6D;
 }
+.header .profile-picture{
+    background-image: url("profile-picture.gif");
+    padding: 5vh 5vh;
+    background-size: cover;
+    border:none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.header .profile-picture:focus{
+    outline: none;
+    box-shadow: none;
+}
+
 .main button{
     padding: 1vh 1vh;
     background-color: rgba(242,111,109,1);
@@ -92,19 +110,6 @@ ul.menu {
     outline: none;
     box-shadow: none;
 }
-.header .profile-picture{
-    background-image: url("profile-picture.gif");
-    padding: 5vh 5vh;
-    background-size: cover;
-    border:none;
-    border-radius: 60px;
-    cursor: pointer;
-}
-.header .profile-picture:focus{
-    outline: none;
-    box-shadow: none;
-}
-
 
 .main .dark-mode-btn{
     position: absolute;
@@ -135,7 +140,6 @@ ul.menu {
     position: relative;
     height: 100vh;
     font-size: 2vh;
-    margin-bottom: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +159,7 @@ ul.menu {
 
 }
 
+
 .main section{
     background-color: #eaeaea;
     opacity: 0.8;
@@ -169,6 +174,8 @@ ul.menu {
 }
 
 .main span{
+    margin-left:50px;
+    margin-right: 50px;
     display: flex;
     flex-wrap: wrap;
     font-size: 2.5vh;
@@ -177,24 +184,161 @@ ul.menu {
 
 }
 .main fieldset{
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
 
 }
 .main legend{
     font-style: italic;
+    margin-bottom: 10px;
+}
+.checkbox-container, .radio-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox-container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox-checkmark {
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    margin-bottom: 5px;
+    background-color: #ccc;
+    border-radius: 8px;
+}
+.radio-checkmark {
+    top: 0;
+    right:5px;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 5px;
 }
 
-footer{
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkbox-checkmark{
+    background-color: #e7baba;
+}
+.radio-container:hover input ~ .radio-checkmark{
+    background-color: #e7baba;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkbox-checkmark {
+    background-color: rgba(242,111,109,1);
+}
+.radio-container input:checked ~ .radio-checkmark {
+    background-color: rgba(242,111,109,1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+    display: block;
+}
+.radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkbox-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.radio-container .radio-checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.footer_container{
+    padding: 4rem 0 0;
+    background-color: #24252A;
+    color: white;
+}
+
+.footer {
     display: flex;
     justify-content: center;
-    background-color: #fa17a7;
-    color:white;
-    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+.footer-heading{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h1{
+    margin-bottom: 1rem;
+}
+
+.footer-heading a{
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-heading a:hover{
+    color: #F26F6D;
+}
+
+.copyright_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+}
+
+.copyright_text{
+    color: #888888;
+    font-size: 0.8em;
 }
 
 .dark-mode{
-    background-color: #18191A;
+    background-color: #24252A;
     color:white;
 }
 .dark-mode-form-container{
@@ -203,8 +347,10 @@ footer{
 }
 section.form-generator.dark-mode-form-container {
     background-color: #242526;
+    border-radius: 18px;;
 }
 .dark-mode-form{
+    border-radius: 18px;
     background-color: #242526;
 
 }
