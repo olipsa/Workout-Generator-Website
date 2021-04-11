@@ -26,7 +26,7 @@ body{
     height: 100%;
 }
 
-.container.desktop {
+.container{
     height: 100%;
     overflow: hidden;
 }
