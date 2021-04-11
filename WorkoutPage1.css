@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap');
+html, body {
+    border:0;
+    margin:0;
+    padding:0;
+
+
+}
+li, a, button,h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+    color: #D3D3D3;
+    text-decoration: none;
+}
+body{
+
+    font-family: Verdana;
+    background-color: #24252A;
+    color:#D3D3D3;
+}
+.top-menu{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 5vh;
+}
+.top-menu .site-logo{
+    cursor: pointer;
+}
+.top-menu img{
+    width:12vw;
+}
+.top-menu .menu li{
+    display: inline-block;
+    padding: 0 5px;
+
+}
+
+.top-menu .menu li a{
+    transition: all 0.3s ease 0s;
+}
+
+.top-menu .menu li a:hover{
+    color: #F26F6D;
+}
+.profile-menu{
+    display: none;
+    border: 1px solid white;
+    border-radius: 32px;
+    background-color:#24252A;
+    opacity: 0.9;
+    position: absolute;
+    bottom:68vh;
+    right: 3em;
+
+
+}
+.profile-menu .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+ul.menu {
+    list-style-type: none;
+}
+.profile-menu li a{
+    transition: all 0.3s ease 0s;
+}
+.profile-menu li a:hover{
+    color: #F26F6D;
+}
+.header .profile-picture{
+    background-image: url("profile-picture.gif");
+    padding: 4vh 4vh;
+    background-size: cover;
+    border:none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.header .profile-picture:focus{
+    outline: none;
+    box-shadow: none;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2e2f35;
+}
+.main .video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.video-container .video{
+    width:420px;
+    height:315px;
+}
+@media screen and (max-width: 600px) {
+    .video-container .video {
+        width:270px;
+        height:215px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .main .video-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+}
+
+/*Stopwatch*/
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 20vw;
+    border: 4px solid;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vw;
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    margin-bottom: 10px;
+}
+.controls img{
+    width: 10vh;
+}
+
+.main button {
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+}
+.main button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.main .calories-burnt{
+    margin-bottom: 20px;
+}
+
+#playButton {
+    display: block;
+}
+
+#pauseButton {
+    display: none;
+}
+
+/*Footer*/
+.footer_container{
+    padding: 4rem 0 0;
+    background-color: #24252A;
+    color: white;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-heading{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:20vw;
+    margin-bottom: 1rem;
+}
+
+.footer-heading h1{
+    margin-bottom: 1rem;
+}
+
+.footer-heading a{
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-heading a:hover{
+    color: #F26F6D;
+}
+
+.copyright_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+}
+
+.copyright_text{
+    color: #888888;
+    font-size: 0.8em;
+}
+
+
+
+
+
