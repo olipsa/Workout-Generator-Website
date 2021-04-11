@@ -94,7 +94,7 @@ section {
     text-align: center;
 }
 
-.signup_link, a{
+.signup_link a, .forgot_pass a, .TOS a, .new_user a{
     cursor: pointer;
     color: rgba(242,111,109,1);
     text-decoration: none;
