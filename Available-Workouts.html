@@ -2,15 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Workout generator</title>
+    <title>Available Workouts</title>
     <link rel="stylesheet" href="Available-Workouts.css">
 </head>
 <body class="body">
 <header class="header">
-        <p>Here we will set login/logout button, FAQ, Contact support and a logo</p>
-        <button type="button" class="button" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
+    <section class="top-menu">
+        <a href="homepage.html" class="site-logo">
+            <img src="logo_dark_mode.png" alt="logo" >
+        </a>
+        <nav class="menu">
+            <ul role="menu">
+                <li role="menuitem">
+                    <a href="leaderboard.html">Leaderboard</a>
+                </li>
+                <li role="menuitem">
+                    <a href="faq.html">FAQ</a>
+                </li>
+                <li role="menuitem">
+                    <a href="support.html">Support</a>
+                </li>
+                <li role="menuitem">
+                    <a href="homepage.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="profile-picture" onclick="showMenu()"></button>
+    </section>
 </header>
 
+<main class="main">
+    <section class="image-name-duration">
+        <img src="workouts/1.jfif" alt="1">
+        <p>High-Intensity Interval Training</p>
+        <p>30 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/2.jpg" alt="2">
+        <p>At-Home Bootcamp</p>
+        <p>20 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/3.jpg" alt="3">
+        <p>Full Body Workout</p>
+        <p>10 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/4.jpg" alt="4">
+        <p>Aerobic Exercise</p>
+        <p>15 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/5.jpg" alt="5">
+        <p>Anaerobic Exercise</p>
+        <p>20 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/6.jpg" alt="6">
+        <p>Circuit Workout</p>
+        <p>15 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/7.jpg" alt="7">
+        <p>Resistance Training</p>
+        <p>20 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/8.jpg" alt="8">
+        <p>Speed Strength</p>
+        <p>10 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/9.jpg" alt="9">
+        <p>Bodyweight Workout</p>
+        <p>20 min</p>
+    </section>
+    <section class="image-name-duration">
+        <img src="workouts/10.jpg" alt="10">
+        <p>Interval Training</p>
+        <p>15 min</p>
+    </section>
+</main>
+
+<footer>
+    <div class="footer_container">
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <h1>Discover Fitter</h1>
+                <a href="#">About us</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Careers</a>
+                <a href="#">Sign Up</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-heading footer-2">
+                <h1>Legal</h1>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-heading footer-3">
+                <h1>Socials</h1>
+                <a href="https://www.instagram.com/vaasxo/">Instagram</a>
+                <a href="https://www.facebook.com/vaasxo/">Facebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright_container">
+        <span class="copyright_text">© 2021 Ondina Lipsa, Radu Deleanu, Alexandra Spanache</span>
+    </div>
+</footer>
+<section id="loader" class="loader" onload="loading() "></section>
+<section class="profile-menu" id="profile-menu">
+    <nav class="menu">
+        <ul role="menu" class="menu">
+            <li role="menuitem">
+                <a href="leaderboard.html">Signed in as Kate</a>
+            </li>
+            <li role="menuitem">
+                <a href="faq.html">News</a>
+            </li>
+            <li role="menuitem">
+                <a href="support.html">Statistics</a>
+            </li>
+            <li role="menuitem">
+                <a href="Workout-Generator.html">Workout generator</a>
+            </li>
+            <li role="menuitem">
+                <a href="Available-Workouts.html">Available Workouts</a>
+            </li>
+            <li role="menuitem">
+                <a href="login.html">Achievements</a>
+            </li>
+            <li role="menuitem">
+                <a href="login.html">Log out</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+<script>
+
+    function showMenu(){
+        let menuStyle=document.getElementById("profile-menu").style.display;
+        if(menuStyle==="flex")
+            document.getElementById("profile-menu").style.display="none";
+        else
+            document.getElementById("profile-menu").style.display="flex";
+
+    }
+
+</script>
 
 </body>
+
 </html>
