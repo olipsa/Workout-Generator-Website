@@ -30,7 +30,7 @@ body{
     cursor: pointer;
 }
 .top-menu img{
-    width:20vh;
+    width:12vw;
 }
 .top-menu .menu li{
     display: inline-block;
@@ -80,9 +80,10 @@ ul.menu {
 .profile-menu li a:hover{
     color: #F26F6D;
 }
+
 .header .profile-picture{
     background-image: url("profile-picture.gif");
-    padding: 5vh 5vh;
+    padding: 4vh 4vh;
     background-size: cover;
     border:none;
     border-radius: 60px;
@@ -110,11 +111,14 @@ ul.menu {
     outline: none;
     box-shadow: none;
 }
+.main .submit-button{
+    margin-top: 20px;
 
+}
 .main .dark-mode-btn{
     position: absolute;
     left:2vw;
-    top:10vh;
+    top:1vh;
     height: 7vh;
 
 }
@@ -345,10 +349,11 @@ ul.menu {
     background-color: #242526;
     border-radius: 18px;
 }
-section.form-generator.dark-mode-form-container {
+section.form-generator.dark-mode-form-container, section.submit-button.dark-mode-form-container{
     background-color: #242526;
     border-radius: 18px;;
 }
+
 .dark-mode-form{
     border-radius: 18px;
     background-color: #242526;

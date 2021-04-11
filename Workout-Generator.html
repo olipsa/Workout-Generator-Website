@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Workout generator</title>
     <link rel="stylesheet" href="Workout-Generator.css">
+    <link rel="shortcut icon" href="logo_dark_mode.ico" type="image/x-icon" />
 </head>
 <body class="body">
 <header class="header">
@@ -27,7 +28,9 @@
                 </li>
             </ul>
         </nav>
-        <button class="profile-picture" onclick="showMenu()"></button>
+        <section class="profile-picture-container">
+            <button class="profile-picture" onclick="showMenu()"></button>
+        </section>
     </section>
 </header>
 
@@ -52,7 +55,10 @@
                 <label class="checkbox-container">Back Workout<input type="checkbox" name="checkbox" value="back"><span class="checkbox-checkmark"></span></label>
                 <label class="checkbox-container">Shoulders Workout<input type="checkbox" name="checkbox" value="shoulders"><span class="checkbox-checkmark"></span></label>
             </fieldset>
-            <br><button type="submit" class="button" onclick="removeElements();loading()">Generate personalised workout</button>
+
+            <section class="submit-button">
+                <button type="submit" class="button" onclick="removeElements();loading()">Generate personalised workout</button>
+            </section>
         </form>
     </section>
     <button type="button" class="dark-mode-btn" id="dark-mode-btn" onclick="switchTheme()">Switch to<br> dark mode</button>
@@ -124,7 +130,8 @@
         const form3=body.querySelector('.main .form-background');
         const form4=body.querySelector('.form-fields1');
         const form5=body.querySelector('.form-fields2');
-        const btn2=body.querySelector('.form-background .button');
+        const submitButtonDiv=body.querySelector('.form-background .submit-button');
+        const btn2=body.querySelector('.form-background .submit-button .button');
         const btn3=body.querySelector('.main .dark-mode-btn');
 
         body.classList.toggle("dark-mode");
@@ -134,6 +141,7 @@
         form3.classList.toggle("dark-mode-form");
         form4.classList.toggle("dark-mode-form");
         form5.classList.toggle("dark-mode-form");
+        submitButtonDiv.classList.toggle("dark-mode-form-container");
         btn2.classList.toggle("dark-mode-button");
         btn3.classList.toggle("dark-mode-button");
 

@@ -30,7 +30,7 @@ body{
     cursor: pointer;
 }
 .top-menu img{
-    width:20vh;
+    width:12vw;
 }
 .top-menu .menu li{
     display: inline-block;
@@ -78,7 +78,7 @@ ul.menu {
 }
 .header .profile-picture{
     background-image: url("profile-picture.gif");
-    padding: 5vh 5vh;
+    padding: 4vh 4vh;
     background-size: cover;
     border:none;
     border-radius: 60px;
