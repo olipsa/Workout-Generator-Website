@@ -28,10 +28,11 @@ main{
     justify-content: space-around;
     align-items: center;
     flex-direction:column;
+    text-align: center;
 }
 main .emailicon{
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
 }
 main .Xicon{
     width: 1rem;
@@ -41,7 +42,7 @@ main .Xicon{
     right:30%;
 }
 main h1{
-    color: #F26F6D;
+    color: #EE1C50;
     font-size: 2em;
 }
 .footer_container{
