@@ -10,7 +10,7 @@ html, body {
 li, a, button,h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2vh;
+    font-size: 1em;
     color: #D3D3D3;
     text-decoration: none;
 }
@@ -20,12 +20,16 @@ body{
     background-color: #24252A;
     color:#D3D3D3;
 }
+header{
+    position: relative;
+    padding: 1vh 5vh;
+}
+
 .top-menu{
     background-color: #24252A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vh 5vh ;
 }
 .top-menu .site-logo{
     cursor: pointer;
@@ -33,17 +37,24 @@ body{
 .top-menu img{
     width:12vw;
 }
-.top-menu .menu li{
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 0.6vh;
 
 }
 
-.top-menu .menu li a{
+.header .menu li a{
     transition: all 0.3s ease 0s;
 }
 
-.top-menu .menu li a:hover{
+.header .menu li a:hover{
     color: #F26F6D;
 }
 .profile-menu{
@@ -106,6 +117,15 @@ ul.menu {
     width:420px;
     height:315px;
 }
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    margin-bottom: 2vh;
+
+}
 @media screen and (max-width: 600px) {
     .video-container .video {
         width:270px;
@@ -115,25 +135,35 @@ ul.menu {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
     }
     .main .video-container{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 40vh;
+        margin: 0;
+        width: 100%;
+    }
+    .stopwatch .circle{
+        height:30vw;
+        width: 30vw;
+    }
+    .stopwatch{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2vh;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
     }
 }
-
-/*Stopwatch*/
-.stopwatch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-
-}
-
 .circle {
     display: flex;
     justify-content: center;

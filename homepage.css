@@ -264,20 +264,31 @@ section {
 
 .footer_container{
     padding: 4rem 0 0;
+    background-color: #24252A;
+    color: white;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0 auto;
+}
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 .footer-heading{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-right: 4rem;
+    width:20vw;
+    margin-bottom: 1rem;
 }
 
 .footer-heading h1{

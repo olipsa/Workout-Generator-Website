@@ -13,7 +13,11 @@
         <a href="homepage.html" class="site-logo">
             <img src="logo_dark_mode.png" alt="logo" >
         </a>
-        <nav class="menu">
+        <section class="profile-picture-container">
+            <button class="profile-picture" onclick="showMenu()"></button>
+        </section>
+    </section>
+    <nav class="menu">
         <ul role="menu">
             <li role="menuitem">
                 <a href="leaderboard.html">Leaderboard</a>
@@ -27,12 +31,8 @@
             <li role="menuitem">
                 <a href="support.html">Contact</a>
             </li>
-
         </ul>
     </nav>
-        <button class="profile-picture" onclick="showMenu()"></button>
-    </section>
-
 </header>
 
 <main class="main">
@@ -57,7 +57,7 @@
                 <img id="resetButton" src="stop-button.svg" alt="reset-button"/>
             </button>
         </section>
-        <section class="calories-burnt" id="calories">Calories burnt: 0 kcal</section>
+        <section class="calories-burned" id="calories">Calories burned: 0 kcal</section>
     </section>
 
 </main>
@@ -158,7 +158,7 @@
         document.getElementById("display").innerHTML = txt;
     }
     function setCalories(number){
-        document.getElementById("calories").innerText="Calories burnt: "+number+"kcal";
+        document.getElementById("calories").innerText="Calories burned: "+number+"kcal";
     }
 
     // Create "start", "pause" and "reset" functions

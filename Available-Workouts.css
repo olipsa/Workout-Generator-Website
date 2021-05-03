@@ -19,12 +19,16 @@ body{
     background-color: #24252A;
     color:#D3D3D3;
 }
+header{
+    position: relative;
+    padding: 1vh 5vh;
+}
+
 .top-menu{
     background-color: #24252A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vh 5vh ;
 }
 .top-menu .site-logo{
     cursor: pointer;
@@ -32,17 +36,24 @@ body{
 .top-menu img{
     width:12vw;
 }
-.top-menu .menu li{
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 0.6vh;
 
 }
 
-.top-menu .menu li a{
+.header .menu li a{
     transition: all 0.3s ease 0s;
 }
 
-.top-menu .menu li a:hover{
+.header .menu li a:hover{
     color: #F26F6D;
 }
 .profile-menu{
@@ -120,12 +131,26 @@ ul.menu {
     flex-wrap: nowrap;
     margin: 0 auto;
 }
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
+    }
+}
 
 .footer-heading{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-right: 4rem;
+    width:20vw;
+    margin-bottom: 1rem;
 }
 
 .footer-heading h1{
