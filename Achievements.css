@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+html, body {
+    border:0;
+    margin:0;
+    padding:0;
+
+
+}
+li, a, button,h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    color: #D3D3D3;
+    text-decoration: none;
+}
+body{
+
+    font-family: Verdana;
+    background-color: #24252A;
+    color:#D3D3D3;
+}
+header{
+    position: relative;
+    padding: 1vh 5vh;
+}
+
+.top-menu{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-menu .site-logo{
+    cursor: pointer;
+}
+.top-menu img{
+    width:12vw;
+}
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
+    display: inline-block;
+    padding: 0 0.6vh;
+
+}
+
+.header .menu li a{
+    transition: all 0.3s ease 0s;
+}
+
+.header .menu li a:hover{
+    color: #F26F6D;
+}
+.profile-menu{
+    display: none;
+    border: 1px solid white;
+    border-radius: 32px;
+    background-color:#24252A;
+    opacity: 0.9;
+    position: absolute;
+    top:10vh;
+    right: 3em;
+    font-size: 2vh;
+
+
+}
+.profile-menu .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+.profile-menu .menu:after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 85%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+ul.menu {
+    list-style-type: none;
+}
+.profile-menu li a{
+    transition: all 0.3s ease 0s;
+}
+.profile-menu li a:hover{
+    color: #F26F6D;
+}
+.header .profile-picture{
+    background-image: url("profile-picture.gif");
+    padding: 4vh 4vh;
+    background-size: cover;
+    border:none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.header .profile-picture:focus{
+    outline: none;
+    box-shadow: none;
+}
+.main{
+    background-color: #36373d;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+.main h4{
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+.main .achievements-text{
+    font-family: "Century Gothic";
+    font-size: 1.5em;
+    margin:2em;
+    align-self: center;
+}
+.main .achievements-object{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+}
+.main .achievement-full-description{
+    display:flex;
+    margin: 3vw auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    width: 40vh;
+
+
+}
+.main .achievement-image-name{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+
+}
+.main .achievement-image-name:hover+ h4{
+    visibility: visible;
+}
+.main img{
+    align-self: center;
+    border-radius: 16px;
+    height:15vh;
+    width: auto;
+    opacity:1;
+
+}
+.main img#default{
+    opacity: 1;
+}
+
+.footer_container{
+    padding: 4rem 0 0;
+    background-color: #24252A;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
+    }
+}
+
+.footer-heading{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:20vw;
+    margin-bottom: 1rem;
+}
+
+.footer-heading h1{
+    margin-bottom: 1rem;
+}
+
+.footer-heading a{
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-heading a:hover{
+    color: #F26F6D;
+}
+
+.copyright_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+}
+
+.copyright_text{
+    color: #888888;
+    font-size: 0.8em;
+}
+
+
+
+
+
