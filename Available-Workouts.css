@@ -9,7 +9,7 @@ html, body {
 li, a, button,h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2vh;
+    font-size: 1em;
     color: #D3D3D3;
     text-decoration: none;
 }
@@ -105,11 +105,12 @@ ul.menu {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    font-size: 2vh;
 }
 .main .image-name-duration{
     display:flex;
     flex-direction: column;
-    margin: 3px auto;
+    margin: 10px auto;
     cursor: pointer;
 
 }

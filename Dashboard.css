@@ -9,47 +9,60 @@ html, body {
 li, a, button,h1,p,div {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2vh;
+    font-size: 1em;
     color: #D3D3D3;
     text-decoration: none;
 }
 body{
     background-color: #1f2024;
 }
+header{
+    position: relative;
+}
+
 .top-menu{
     background-color: #24252A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh 5vh;
+    padding: 1vh 5vh;
 }
 .top-menu .site-logo{
     cursor: pointer;
 }
 .top-menu img{
-    width:20vh;
+    width:12vw;
 }
-.top-menu .menu li{
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 0.6vh;
 
 }
 
-.top-menu .menu li a{
+.header .menu li a{
     transition: all 0.3s ease 0s;
 }
 
-.top-menu .menu li a:hover{
+.header .menu li a:hover{
     color: #F26F6D;
 }
 .profile-menu{
     display: none;
     border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 32px;
+    opacity: 0.9;
     background-color:#24252A;
     position: absolute;
-    bottom:68vh;
+    bottom:73vh;
     right: 3em;
+    font-size: 2vh;
 
 
 }
@@ -74,7 +87,7 @@ ul.menu {
 }
 .header .profile-picture{
     background-image: url("https://raw.githubusercontent.com/AlexandraSpa/WTproject/main/profile-picture.gif");
-    padding: 5vh 5vh;
+    padding: 4vh 4vh;
     background-size: cover;
     border:none;
     border-radius: 60px;
@@ -88,7 +101,8 @@ main{
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;  
+    flex-direction: row;
+    font-size: 2vh;
 }
 h3{
     color: #F26F6D;
@@ -109,12 +123,34 @@ main .Seticon{
     flex-wrap: nowrap;
     margin: 0 auto;
 }
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .button{
+        font-size: 3vw;
+        align-self: center;
+        margin-left:25%;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
+    }
+    .main{
+        height: 120vh;
+    }
+}
 
 .footer-heading{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-right: 4rem;
+    width:20vw;
+    margin-bottom: 1rem;
 }
 
 .footer-heading h1{
@@ -136,6 +172,7 @@ main .Seticon{
     justify-content: flex-end;
     margin-right: 4rem;
     padding-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .copyright_text{
