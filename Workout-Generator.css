@@ -63,11 +63,21 @@ header{
     background-color:#24252A;
     opacity: 0.9;
     position: absolute;
-    bottom:73vh;
+    top:10vh;
     right: 3em;
     font-size: 2vh;
 
 
+}
+.profile-menu .menu:after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 85%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
 }
 .profile-menu .menu{
     display: flex;
