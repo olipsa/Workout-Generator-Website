@@ -60,11 +60,11 @@ input {
 }
 
 .menu_button{
-    padding: 0.3vw 0.5vw;
+    padding: 1.3vh 1.3vh;
     font-size: 1vw;
     background-color: rgba(238,28,80,1);
     border: none;
-    border-radius: 2em;
+    border-radius: 60px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
@@ -106,7 +106,7 @@ input {
 }
 
 .container_register{
-    width: 25vw;
+    width: 50vh;
     height: auto;
     background: transparent;
     position: relative;
@@ -160,7 +160,7 @@ input {
 }
 
 .register_button{
-    font-size: 2vw;
+    font-size: 1em;
     color: #f6f5f5;
     display: flex;
     justify-content: center;
@@ -175,7 +175,21 @@ input {
 .TOS{
     text-align: center;
     margin-top: 2em;
-    font-size: 1em;
-    width: 25vw;
+    font-size: 0.7em;
+    width: 50vh;
     line-height: 24px;
+}
+@media screen and (max-width: 550px){
+    .menu_bar{
+        font-size: 3vw;
+    }
+    .menu_bar img{
+        width:20vw;
+    }
+    .menu_button{
+        font-size: 3.5vw;
+    }
+    .container_register, .TOS{
+        width: 30vh;
+    }
 }
