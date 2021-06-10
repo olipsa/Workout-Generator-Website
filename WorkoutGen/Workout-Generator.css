@@ -15,7 +15,7 @@ li, a, button,h1 {
 }
 body{
 
-    font-family: Verdana;
+    font-family: Verdana, serif;
     background-color: #24252A;
     color:black;
 }
@@ -100,7 +100,7 @@ ul.menu {
 }
 
 .header .profile-picture{
-    background-image: url("profile-picture.gif");
+    background-image: url("../profile-picture.gif");
     padding: 4vh 4vh;
     background-size: cover;
     border:none;
@@ -169,7 +169,7 @@ ul.menu {
 }
 .main::before{
     content:"";
-    background-image: url("workout-generator-bg-image.jpg");
+    background-image: url("WorkoutGen/workout-generator-bg-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
