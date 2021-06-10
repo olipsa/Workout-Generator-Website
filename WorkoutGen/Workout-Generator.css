@@ -169,7 +169,7 @@ ul.menu {
 }
 .main::before{
     content:"";
-    background-image: url("WorkoutGen/workout-generator-bg-image.jpg");
+    background-image: url("workout-generator-bg-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
