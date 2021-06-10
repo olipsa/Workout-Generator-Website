@@ -160,7 +160,7 @@ ul.menu {
 
 .main{
     position: relative;
-    height: 100vh;
+    padding: 5vh 2vh 2vh 2vh;
     font-size: 2vh;
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@ ul.menu {
 }
 .main::before{
     content:"";
-    background-image: url("workout-generator-bg-image.jpg");
+    background-image: url("workout-generator-bg-image1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -327,8 +327,8 @@ ul.menu {
 }
 @media screen and (max-width: 550px){
     .main .form-generator{
-        margin-top: 30vh;
-        margin-bottom: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
         max-width: 90vw;
     }
     .footer{
@@ -342,13 +342,13 @@ ul.menu {
         margin-left:25%;
     }
     .top-menu img{
-        width:20vw;
+
     }
     .header{
         font-size: 3.5vw;
     }
     .main{
-        height: 120vh;
+
     }
 }
 
