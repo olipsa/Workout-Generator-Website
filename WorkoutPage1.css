@@ -118,9 +118,25 @@ ul.menu {
     align-items: center;
     background-color: #2e2f35;
 }
-.main .exercise-list{
+
+.main .exercise{
+    border: 2px solid white;
+    background-color: #3b3e44;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    list-style: none;
+}
+ol{
+    padding-inline-start: 0px;
+}
+.exercise-text{
+    width: 50%;
+    margin-top: 10px;
+
 }
 .exercise-number {
     font-family: Lora,serif;
@@ -134,19 +150,36 @@ ul.menu {
     text-align: center;
     float: left;
 }
+.exercise-about{
+    display: flex;
+    flex-direction: column;
+}
 .exercise-title {
     font-family: Open Sans,sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-top: 0;
-    margin-bottom: 10px;
 }
+.exercise-about strong{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.exercise-about ul{
+    margin-top: 10px;
+
+}
+.exercise-about li{
+    font-family: Open Sans,sans-serif;
+}
+
 .main .video-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 60vh;
+    width: 50%;
+
 
 }
 .video-container .video{
@@ -199,6 +232,13 @@ ul.menu {
     }
     .header{
         font-size: 3.5vw;
+    }
+    .main .exercise-list{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .exercise-text,.video-container{
+        width: 100%;
     }
 }
 .circle {

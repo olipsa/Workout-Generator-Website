@@ -111,28 +111,31 @@ ul.menu {
     outline: none;
     box-shadow: none;
 }
+.submit-button{
+    display: flex;
+    justify-content: center;
+}
 
-.main button{
+
+.main .dark-mode-btn,.main .submit-button .button{
     padding: 1vh 3vh;
     background-color: rgba(238,28,80,1);
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    height: 50%;
+    margin-top: 20px;
 }
 
-.main button:hover{
-    background-color: rgba(242,111,109,1);
-}
 .main button:focus{
     outline: none;
     box-shadow: none;
 }
-.main .submit-button{
-    margin-top: 20px;
 
+.main .submit-button .button:hover{
+    background-color: rgba(242,111,109,1);
 }
+
 .main .dark-mode-btn{
     position: absolute;
     left:2vw;
@@ -140,24 +143,21 @@ ul.menu {
     height: 7vh;
 
 }
-.main .form-generator .button{
-    position: sticky;
-    margin-bottom: 5px;
-}
 .main .dark-mode-btn:hover{
     background-color: #151515;
-    border:2px solid #151515;
     color:white;
-    border-radius:10px;
+}
 
+.main .form-generator .button{
+    position: sticky;
+    align-self: center;
+    margin-bottom: 5px;
 }
 .main .form-generator .button:hover{
     background-color: rgba(242,111,109,1);
     border: none;
     border-radius: 30px;
-
 }
-
 .main{
     position: relative;
     padding: 5vh 2vh 2vh 2vh;
@@ -177,14 +177,12 @@ ul.menu {
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.9;
 
 }
 
 
-.main section{
-    background-color: #eaeaea;
-    opacity: 0.8;
+.main .form-generator{
+    background-color: rgba(238, 238, 238, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,6 +242,7 @@ ul.menu {
     width: 25px;
     margin-bottom: 5px;
     background-color: #ccc;
+    border:2px solid #5c5b5b;
     border-radius: 8px;
 }
 .radio-checkmark {
@@ -253,6 +252,7 @@ ul.menu {
     width: 25px;
     background-color: #ccc;
     border-radius: 50%;
+    border:2px solid #5c5b5b;
     margin-bottom: 5px;
 }
 
@@ -264,7 +264,7 @@ ul.menu {
     background-color: #e7baba;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a pink background */
 .checkbox-container input:checked ~ .checkbox-checkmark {
     background-color: rgba(238,28,80,1);
 }
@@ -392,28 +392,22 @@ ul.menu {
     color:white;
 }
 .dark-mode-form-container{
-    background-color: #242526;
+    background-color: rgba(36,37,38,0.8);
     border-radius: 18px;
-}
-section.form-generator.dark-mode-form-container, section.submit-button.dark-mode-form-container{
-    background-color: #242526;
-    border-radius: 18px;;
-}
-
-.dark-mode-form{
-    border-radius: 18px;
-    background-color: #242526;
-
 }
 .dark-mode-button{
-    background-color: #151515;
-
-
+    background-color: rgba(36, 36, 36,1);
 }
 .dark-mode-button:hover{
     background-color: rgba(238,28,80,1);
 
 }
+section.form-generator.dark-mode-form-container, section.submit-button.dark-mode-form-container{
+    background-color: rgba(36,37,38,0.8);
+    border-radius: 18px;;
+}
+
+
 
 .loader {
     display: none;

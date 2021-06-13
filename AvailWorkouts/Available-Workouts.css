@@ -131,6 +131,9 @@ ul.menu {
     width: auto;
 
 }
+.main img:hover{
+    opacity: 0.6;
+}
 .footer_container{
     padding: 4rem 0 0;
     background-color: #24252A;

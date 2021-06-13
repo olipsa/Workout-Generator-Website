@@ -122,9 +122,12 @@ ul.menu {
 }
 .main .achievements-text{
     font-family: "Century Gothic", serif;
-    font-size: 1.5em;
-    margin:2em;
+    font-size: 3em;
+    margin:1em;
     align-self: center;
+    background-color: #484a53;
+    border: 2px solid #484a53;
+    border-radius: 20px;
 }
 .main .achievements-object{
     display: flex;
@@ -132,6 +135,7 @@ ul.menu {
     flex-wrap: wrap;
     margin-left: 10vw;
     margin-right: 10vw;
+
 
 }
 .main .achievement-full-description{
@@ -148,10 +152,19 @@ ul.menu {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
+    background-color: #484a53;
+    border: 2px solid #fce303;
+    border-radius: 20px;
+    height: 100%;
+    width:50%;
+
 
 }
 .main .achievement-image-name:hover+ h4{
     visibility: visible;
+}
+.main h4{
+    width:50%;
 }
 .main img{
     align-self: center;
@@ -162,7 +175,7 @@ ul.menu {
 
 }
 .main img#default{
-    opacity: 1;
+    opacity: 0.2;
 }
 
 .footer_container{
