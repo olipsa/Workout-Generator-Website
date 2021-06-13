@@ -6,28 +6,131 @@ html, body {
 
 
 }
-li, a, h1,p {
+li, a, button,h1,p,div, form {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2vh;
+    font-size: 1em;
     color: #D3D3D3;
     text-decoration: none;
 }
-header .site-logo{
-    cursor: pointer;
-    width:1rem;
-    height:1rem;
-    object-fit: cover;
-}    
 body{
     background-color: #1f2024;
 }
-main{
-    display:flex;
-    position:relative;
-    justify-content: space-around;
+header{
+    position: relative;
+}
+
+.top-menu{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction:column;
+    padding: 1vh 5vh;
+}
+.top-menu .site-logo{
+    cursor: pointer;
+}
+.top-menu img{
+    width:12vw;
+}
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
+    display: inline-block;
+    padding: 0 0.6vh;
+
+}
+
+.header .menu li a{
+    transition: all 0.3s ease 0s;
+}
+
+.header .menu li a:hover{
+    color: #F26F6D;
+}
+.profile-menu{
+    display: none;
+    border: 1px solid white;
+    border-radius: 32px;
+    background-color:#24252A;
+    opacity: 0.9;
+    position: absolute;
+    top:10vh;
+    right: 3em;
+    font-size: 2vh;
+
+
+}
+.profile-menu .menu:after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 85%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+.profile-menu .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+ul.menu {
+    list-style-type: none;
+}
+.profile-menu li a{
+    transition: all 0.3s ease 0s;
+}
+.profile-menu li a:hover{
+    color: #F26F6D;
+}
+.header .profile-picture{
+    background-image: url("https://raw.githubusercontent.com/AlexandraSpa/WTproject/main/profile-picture.gif");
+    padding: 4vh 4vh;
+    background-size: cover;
+    border:none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.header .profile-picture:focus{
+    outline: none;
+    box-shadow: none;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+main .profile-image-container{
+    display: flex;
+    flex-direction: column;
+}
+main .profile-image{
+    width: 10rem;
+    height: 10rem;
+}
+main form{
+    display:flex;
+    flex-direction: column;
+}
+main form button{
+    color: #F26F6D;
+    cursor: pointer;
+}main form button:hover{
+     color: #D3D3D3;
+     background-color: #F26F6D;
 }
 .footer_container{
     padding: 4rem 0 0;
@@ -41,12 +144,34 @@ main{
     flex-wrap: nowrap;
     margin: 0 auto;
 }
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .button{
+        font-size: 3vw;
+        align-self: center;
+        margin-left:25%;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
+    }
+    .main{
+        height: 120vh;
+    }
+}
 
 .footer-heading{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-right: 4rem;
+    width:20vw;
+    margin-bottom: 1rem;
 }
 
 .footer-heading h1{
@@ -68,6 +193,7 @@ main{
     justify-content: flex-end;
     margin-right: 4rem;
     padding-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .copyright_text{
