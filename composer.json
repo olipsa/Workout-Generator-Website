@@ -1,0 +1,20 @@
+{
+    "name": "xovaa/backend",
+    "autoload": {
+        "psr-4": {
+            "": "./"
+        },
+        "classmap": [
+            "core/Application.php",
+            "core/Router.php",
+            "core/Request.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "vaasxo",
+            "email": "xovaasxo@gmail.com"
+        }
+    ],
+    "require": {}
+}
