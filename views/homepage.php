@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
+    <style type="text/css">
+        <?php include 'homepage.css'; ?>
+    </style>
     <link rel="shortcut icon" href="../logo_dark_mode.ico" type="image/x-icon"/>
     <title>Home | Fitter</title>
 </head>
@@ -15,7 +17,7 @@
         <a href="homepage.html" class="site-logo">
             <img src="../logo_dark_mode.png" alt="logo">
         </a>
-            <a href="../Login/login.html" class="menu_button">Login</a>
+            <a href="/login" class="menu_button">Login</a>
     </div>
     <nav class="menu">
         <ul role="menu">

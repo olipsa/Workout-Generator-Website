@@ -49,7 +49,7 @@
                 </section>
 
                 <section class="button_container">
-                    <a href="../EmailConfirmation/EmailConfirmation.html" class="register_button">
+                    <a href="/EmailConfirmation" class="register_button">
                         Register
                     </a>
                 </section>

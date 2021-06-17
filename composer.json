@@ -8,6 +8,7 @@
             "core/Application.php",
             "core/Router.php",
             "core/Request.php",
+            "core/Response.php",
             "controllers/SiteController.php"
         ],
         "authors": [
