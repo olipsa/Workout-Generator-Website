@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'xovaa/backend',
+        'reference' => '4d75e38b5a3e62453c4f6edb8823b2d0790373f8',
+        'name' => 'ondina/backend',
         'dev' => true,
     ),
     'versions' => array(
-        'xovaa/backend' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+        'ondina/backend' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '4d75e38b5a3e62453c4f6edb8823b2d0790373f8',
             'dev_requirement' => false,
         ),
     ),

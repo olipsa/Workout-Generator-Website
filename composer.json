@@ -1,5 +1,5 @@
 {
-    "name": "xovaa/backend",
+    "name": "ondina/backend",
     "autoload": {
         "psr-4": {
             "": "./"
@@ -7,14 +7,15 @@
         "classmap": [
             "core/Application.php",
             "core/Router.php",
-            "core/Request.php"
-        ]
-    },
-    "authors": [
-        {
-            "name": "vaasxo",
-            "email": "xovaasxo@gmail.com"
-        }
-    ],
-    "require": {}
+            "core/Request.php",
+            "controllers/SiteController.php"
+        ],
+        "authors": [
+            {
+                "name": "Ondina",
+                "email": "ondina_patricia@yahoo.com"
+            }
+        ],
+        "require": {}
+    }
 }
