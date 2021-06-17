@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Workout generator</title>
     <link rel="stylesheet" href="Workout-Generator.css">
-    <link rel="shortcut icon" href="../logo_dark_mode.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../images/logo_dark_mode.ico" type="image/x-icon" />
 </head>
-<body class="body">
+<body class="body" onload="javascript:chooseTheme()">
 <header class="header">
     <section class="top-menu">
         <a href="../Homepage/homepage.html" class="site-logo">
-            <img src="../logo_dark_mode.png" alt="logo" >
+            <img src="../images/logo_dark_mode.png" alt="logo" >
         </a>
         <section class="profile-picture-container">
             <button class="profile-picture" onclick="showMenu()"></button>
@@ -131,6 +131,13 @@
     </nav>
 </section>
 <script>
+    function chooseTheme(){
+        document.cookie="idk=sdfds";
+        if(document.cookie==="theme=black")
+            switchTheme();
+        else
+            document.cookie="theme=light";
+    }
     function switchTheme() {
 
         const body = document.body;
@@ -139,12 +146,14 @@
         const btn3=body.querySelector('.main .dark-mode-btn');
         main.classList.toggle("dark-mode");
         form.classList.toggle("dark-mode-form-container");
+        document.cookie="theme=black";
 
         if(btn3.innerHTML==="Switch to<br> dark mode"){
             btn3.innerHTML="Switch to<br> light mode";
         }
         else if(btn3.innerHTML==="Switch to<br> light mode"){
             btn3.innerHTML="Switch to<br> dark mode";
+            document.cookie="theme=light";
         }
 
     }

@@ -100,7 +100,7 @@ ul.menu {
 }
 
 .header .profile-picture{
-    background-image: url("../profile-picture.gif");
+    background-image: url("../images/profile-picture.gif");
     padding: 4vh 4vh;
     background-size: cover;
     border:none;
@@ -169,7 +169,7 @@ ul.menu {
 }
 .main::before{
     content:"";
-    background-image: url("workout-generator-bg-image1.jpg");
+    background-image: url("../images/workout-generator-bg-image1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;

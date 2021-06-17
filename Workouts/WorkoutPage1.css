@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap');
+html, body {
+    border:0;
+    margin:0;
+    padding:0;
+
+
+}
+li, a, button,h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    color: #D3D3D3;
+    text-decoration: none;
+}
+body{
+
+    font-family: Verdana;
+    background-color: #24252A;
+    color:#D3D3D3;
+}
+header{
+    position: relative;
+    padding: 1vh 5vh;
+}
+
+.top-menu{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-menu .site-logo{
+    cursor: pointer;
+}
+.top-menu img{
+    width:12vw;
+}
+.header .menu{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menu li{
+    display: inline-block;
+    padding: 0 0.6vh;
+
+}
+
+.header .menu li a{
+    transition: all 0.3s ease 0s;
+}
+
+.header .menu li a:hover{
+    color: #F26F6D;
+}
+.profile-menu{
+    display: none;
+    border: 1px solid white;
+    border-radius: 32px;
+    background-color:#24252A;
+    opacity: 0.9;
+    position: absolute;
+    top:10vh;
+    right: 3em;
+    font-size: 2vh;
+
+
+}
+.profile-menu .menu:after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 85%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+.profile-menu .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+ul.menu {
+    list-style-type: none;
+}
+.profile-menu li a{
+    transition: all 0.3s ease 0s;
+}
+.profile-menu li a:hover{
+    color: #F26F6D;
+}
+.header .profile-picture{
+    background-image: url("../images/profile-picture.gif");
+    padding: 4vh 4vh;
+    background-size: cover;
+    border:none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.header .profile-picture:focus{
+    outline: none;
+    box-shadow: none;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2e2f35;
+}
+
+.main .exercise{
+    border: 2px solid white;
+    background-color: #3b3e44;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    list-style: none;
+}
+ol{
+    padding-inline-start: 0px;
+}
+.exercise-text{
+    width: 50%;
+    margin-top: 10px;
+
+}
+.exercise-number {
+    font-family: Lora,serif;
+    font-size: 2rem;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    float: left;
+}
+.exercise-about{
+    display: flex;
+    flex-direction: column;
+}
+.exercise-title {
+    font-family: Open Sans,sans-serif;
+    color:#F16268;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 0;
+}
+.exercise-about strong{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.exercise-about ul{
+    margin-top: 10px;
+
+}
+.exercise-about li{
+    font-family: Open Sans,sans-serif;
+}
+
+.main .video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 50%;
+
+
+}
+.video-container .video{
+    width:420px;
+    height:315px;
+    border-radius: 20px;
+}
+.stopwatch {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    margin-bottom: 2vh;
+
+}
+@media screen and (max-width: 600px) {
+    .video-container .video {
+        width:270px;
+        height:215px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .main .video-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        margin: 0;
+        width: 100%;
+    }
+    .stopwatch .circle{
+        height:30vw;
+        width: 30vw;
+    }
+    .stopwatch{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 2vh;
+    }
+    .top-menu img{
+        width:20vw;
+    }
+    .header{
+        font-size: 3.5vw;
+    }
+    .main .exercise-list{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .exercise-text,.video-container{
+        width: 100%;
+    }
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 20vw;
+    border: 4px solid;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vw;
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    margin-bottom: 10px;
+}
+.controls img{
+    width: 10vh;
+}
+
+.main button {
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+}
+.main button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.main .calories-burnt{
+    margin-bottom: 20px;
+}
+
+#playButton {
+    display: block;
+}
+
+#pauseButton {
+    display: none;
+}
+
+/*Footer*/
+.footer_container{
+    padding: 4rem 0 0;
+    background-color: #24252A;
+    color: white;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+@media screen and (max-width: 550px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-heading{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:20vw;
+    margin-bottom: 1rem;
+}
+
+.footer-heading h1{
+    margin-bottom: 1rem;
+}
+
+.footer-heading a{
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-heading a:hover{
+    color: #F26F6D;
+}
+
+.copyright_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+}
+
+.copyright_text{
+    color: #888888;
+    font-size: 0.8em;
+}
+
+
+
+
+
