@@ -79,8 +79,6 @@ class Router
             $$key=$value;
         }
 
-        var_dump($params);
-
         ob_start();
 
         include_once Application::$ROOT_DIR."/views/$view.php";
