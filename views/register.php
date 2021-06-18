@@ -22,6 +22,11 @@
         </div>
     </header>
     <main>
+        <?php  $form = \core\form\Form::begin("register_form","post")?>
+            <?php echo $form->field($model, 'email') ?>
+            <?php echo $form->field($model, 'pass') ?>
+            <?php echo $form->field($model, 'confirmPass') ?>
+        <?php \core\form\Form::end()?>
         <form class="register_form" method="post">
             <h1 class="register_title"> Create Your Fitter Account</h1>
             <div class="old_user">
@@ -37,13 +42,13 @@
 
                 <section class="pass_input_container">
                     <label>
-                        <input class="pass_input" type="password" name="password" placeholder="Password">
+                        <input class="pass_input" type="password" name="pass" placeholder="Password">
                     </label>
                 </section>
 
                 <section class="pass_confirm_input_container">
                     <label>
-                        <input class="pass_confirm_input" type="password" name="password_confirmation"
+                        <input class="pass_confirm_input" type="password" name="confirmPass"
                                placeholder="Confirm Password">
                     </label>
                 </section>
