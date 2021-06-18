@@ -10,6 +10,7 @@ class Router
     /**
      * Router constructor.
      * @param Request $request
+     * @param Response $response
      */
     public function __construct(Request $request, Response $response)
     {
@@ -56,7 +57,6 @@ class Router
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view,$params);
         return str_replace('{{content}}', $viewContent, $layoutContent);
-        return $viewContent;
     }
 
     public function renderContent($viewContent)
@@ -69,7 +69,7 @@ class Router
     {
         $layout=Application::$app->controller->layout;
         ob_start();
-        include_once Application::$ROOT_DIR."/views/layouts/$layout.php";
+        include_once __DIR__."/../views/layouts/$layout.php";
         return ob_get_clean();
     }
 
@@ -81,7 +81,7 @@ class Router
 
         ob_start();
 
-        include_once Application::$ROOT_DIR."/views/$view.php";
+        include_once __DIR__."/../views/$view.php";
         return ob_get_clean();
     }
 }
