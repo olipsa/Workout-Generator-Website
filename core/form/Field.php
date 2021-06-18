@@ -8,6 +8,9 @@ use core\Model;
 
 class Field
 {
+    public const TYPE_TEXT='text';
+    public const TYPE_PASSWORD='password';
+    public string $type;
     public Model $model;
     public string $attribute;
 
@@ -18,6 +21,7 @@ class Field
      */
     public function __construct(Model $model, string $attribute)
     {
+        $this->type=self::TYPE_TEXT;
         $this->model = $model;
         $this->attribute = $attribute;
     }
@@ -25,14 +29,26 @@ class Field
     public function __toString()
     {
         return sprintf('
-        <section class="%s">
+        <section class="%s_input_container">
                     <label>
-                        <input class="%s" type="%s" name="%s" placeholder="%s">
+                        <input class="%s_input" type="%s" name="%s" placeholder="%s">
                     </label>
         </section>
-        ', $this->attribute,
-           $this->attribute,
-           $this->model->{$this->attribute},
+        <div class="invalid-feedback" >
+                    %s
+                    </div>
+        ',
+        $this->attribute,
+            $this->attribute,
+            $this->type,
+            $this->attribute,
+            ($this->attribute==='email')?'Email Address':(($this->attribute==='pass')?'Password':'Confirm Password'),
+            //$this->model->hasError($this->attribute)?' is-invalid':'',
+            $this->model->getFirstError($this->attribute)
         );
+    }
+    public function passwordField(){
+        $this->type=self::TYPE_PASSWORD;
+        return $this;
     }
 }

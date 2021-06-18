@@ -23,48 +23,27 @@
     </header>
     <main>
         <?php  $form = \core\form\Form::begin("register_form","post")?>
+        <h1 class="register_title"> Create Your Fitter Account</h1>
+        <div class="old_user">
+            <span>Already have an account?</span>
+            <a href="../Login/login.html" class="signin_link">Sign In</a>
+        </div>
+        <div class="container_register">
             <?php echo $form->field($model, 'email') ?>
-            <?php echo $form->field($model, 'pass') ?>
-            <?php echo $form->field($model, 'confirmPass') ?>
+            <?php echo $form->field($model, 'pass')->passwordField() ?>
+            <?php echo $form->field($model, 'confirmPass')->passwordField() ?>
+            <section class="button_container" type="submit">
+                <button class="register_button">
+                    Register
+                </button>
+            </section>
+            <section class="TOS">
+                *By registering, you agree to our <a href="#">Terms of Use</a> and to receive
+                Fitter emails & updates and acknowledge that you read our <a href="#"> Privacy Policy.</a>
+                You also acknowledge that Fitter uses cookies to give the best user experience.
+            </section>
+        </div>
         <?php \core\form\Form::end()?>
-        <form class="register_form" method="post">
-            <h1 class="register_title"> Create Your Fitter Account</h1>
-            <div class="old_user">
-                <span>Already have an account?</span>
-                <a href="../Login/login.html" class="signin_link">Sign In</a>
-            </div>
-            <div class="container_register">
-                <section class="email_input_container">
-                    <label>
-                        <input class="email_input" type="email" name="email" placeholder="Email Address">
-                    </label>
-                </section>
-
-                <section class="pass_input_container">
-                    <label>
-                        <input class="pass_input" type="password" name="pass" placeholder="Password">
-                    </label>
-                </section>
-
-                <section class="pass_confirm_input_container">
-                    <label>
-                        <input class="pass_confirm_input" type="password" name="confirmPass"
-                               placeholder="Confirm Password">
-                    </label>
-                </section>
-
-                <section class="button_container" type="submit">
-                    <button class="register_button">
-                        Register
-                    </button>
-                </section>
-                <section class="TOS">
-                    *By registering, you agree to our <a href="#">Terms of Use</a> and to receive
-                    Fitter emails & updates and acknowledge that you read our <a href="#"> Privacy Policy.</a>
-                    You also acknowledge that Fitter uses cookies to give the best user experience.
-                </section>
-            </div>
-        </form>
     </main>
 </div>
 </body>

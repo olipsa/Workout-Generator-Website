@@ -30,6 +30,11 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.invalid-feedback{
+    color: #e50425;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
 
 header {
     position: relative;
@@ -132,7 +137,7 @@ input {
     padding: 0 20px 0 38px;
 }
 
-.pass_input_container, .pass_confirm_input_container{
+.pass_input_container, .confirmPass_input_container{
     width: 100%;
     position: relative;
     background-color: transparent;
@@ -141,7 +146,7 @@ input {
     margin-bottom: 1em;
 }
 
-.pass_input, .pass_confirm_input{
+.pass_input, .confirmPass_input{
     color: #f6f5f5;
     line-height: 1.2;
     font-size: 18px;

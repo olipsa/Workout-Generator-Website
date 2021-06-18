@@ -7,7 +7,6 @@ $app->router->get('/', 'homepage');
 
 $app->router->get('/contact', 'contact');
 
-$app->router->get('/login', 'login');
 
 $app->router->get('/EmailConfirmation', 'EmailConfirmation');
 
