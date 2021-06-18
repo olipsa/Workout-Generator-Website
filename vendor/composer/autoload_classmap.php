@@ -7,7 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'controllers\\AuthController' => $baseDir . '/controllers/AuthController.php',
+    'controllers\\SiteController' => $baseDir . '/controllers/SiteController.php',
     'core\\Application' => $baseDir . '/core/Application.php',
+    'core\\Controller' => $baseDir . '/core/Controller.php',
     'core\\Request' => $baseDir . '/core/Request.php',
+    'core\\Response' => $baseDir . '/core/Response.php',
     'core\\Router' => $baseDir . '/core/Router.php',
 );

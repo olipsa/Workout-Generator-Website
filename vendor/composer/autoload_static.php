@@ -12,8 +12,12 @@ class ComposerStaticInitc3a095a052715d43409850d0e68d037b
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'controllers\\AuthController' => __DIR__ . '/../..' . '/controllers/AuthController.php',
+        'controllers\\SiteController' => __DIR__ . '/../..' . '/controllers/SiteController.php',
         'core\\Application' => __DIR__ . '/../..' . '/core/Application.php',
+        'core\\Controller' => __DIR__ . '/../..' . '/core/Controller.php',
         'core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'core\\Response' => __DIR__ . '/../..' . '/core/Response.php',
         'core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
     );
 
