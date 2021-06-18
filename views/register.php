@@ -43,7 +43,7 @@
 
                 <section class="pass_confirm_input_container">
                     <label>
-                        <input class="pass_confirm_input" type="password" name="password"
+                        <input class="pass_confirm_input" type="password" name="password_confirmation"
                                placeholder="Confirm Password">
                     </label>
                 </section>
