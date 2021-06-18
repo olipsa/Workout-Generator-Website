@@ -7,7 +7,7 @@ use core\Request;
 
 class AuthController extends Controller
 {
-    public function login($request){
+    public function login(){
         $this->setLayout('auth');
         return Controller::render('login');
     }
@@ -15,8 +15,6 @@ class AuthController extends Controller
         if($request->isPost()){
             return 'Handle submitted data';
         }
-
-        else
-            return Controller::render('register');
+        return Controller::render('register');
     }
 }

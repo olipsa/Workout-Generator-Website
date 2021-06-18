@@ -11,9 +11,6 @@ $app->router->get('/login', 'login');
 
 $app->router->get('/EmailConfirmation', 'EmailConfirmation');
 
-$app->router->get('/register', [controllers\SiteController::class,'register']);
-$app->router->post('/register', [controllers\SiteController::class,'handleContact']);
-
 $app->router->get('/login', [controllers\AuthController::class,'login']);
 $app->router->post('/login', [controllers\AuthController::class,'login']);
 $app->router->get('/register', [controllers\AuthController::class,'register']);

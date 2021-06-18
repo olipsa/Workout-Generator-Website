@@ -40,8 +40,6 @@ class Request
             foreach($_GET as $key=>$value){
                 $body[$key]=filter_input(INPUT_POST,$key,FILTER_SANITIZE_SPECIAL_CHARS);
             }
-        echo "here";
-        var_dump($body);
 
         return $body;
     }
