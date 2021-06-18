@@ -14,15 +14,17 @@ class SiteController extends Controller
         $params=[
             'name'=>"SMTH"
         ];
-        return render('register',$params);
+        return renderView('register',$params);
     }
     public static function register(){
         return Controller::render('register');
     }
 
-    public function handleContact(Request $request){
+    public function handleContact(Request $request): string
+    {
         $body= $request->getBody();
-        echo $body;
+        var_dump($request);
+        var_dump($body);
         return 'Handling submitted data';
     }
 

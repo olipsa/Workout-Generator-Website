@@ -15,7 +15,7 @@
 <div class="container">
     <header class="menu_bar">
         <div class="button_and_logo">
-            <a href="../Homepage/homepage.html" class="site-logo">
+            <a href="/homepage" class="site-logo">
                 <img src="../images/logo_dark_mode.png" alt="logo">
             </a>
                 <a href="../Homepage/homepage.html" class="menu_button">Home</a>
@@ -48,10 +48,10 @@
                     </label>
                 </section>
 
-                <section class="button_container">
-                    <a href="/EmailConfirmation" class="register_button">
+                <section class="button_container" type="submit">
+                    <button class="register_button">
                         Register
-                    </a>
+                    </button>
                 </section>
                 <section class="TOS">
                     *By registering, you agree to our <a href="#">Terms of Use</a> and to receive

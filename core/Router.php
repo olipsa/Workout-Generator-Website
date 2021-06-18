@@ -5,7 +5,6 @@ class Router
 {
     public Request $request;
     public Response $response;
-
     protected array $routes = [];
 
     /**
@@ -37,7 +36,7 @@ class Router
         if ($callback === false)
         {
             $this->response->setStatusCode(404);
-            return $this->renderContent("Not Found");
+            return $this->renderView("_404");
         }
         if (is_string($callback))
         {
@@ -70,7 +69,7 @@ class Router
     {
         $layout=Application::$app->controller->layout;
         ob_start();
-        include_once __DIR__."/../views/layouts/$layout.php";
+        include_once Application::$ROOT_DIR."/views/layouts/main.php";
         return ob_get_clean();
     }
 
@@ -80,9 +79,11 @@ class Router
             $$key=$value;
         }
 
+        var_dump($params);
+
         ob_start();
 
-        include_once __DIR__."/../views/$view.php";
+        include_once Application::$ROOT_DIR."/views/$view.php";
         return ob_get_clean();
     }
 }

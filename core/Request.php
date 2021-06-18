@@ -17,19 +17,20 @@ class Request
         return substr($path, 0, $position);
     }
 
-    public function method()
+    public function method(): string
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
-    public function isGet()
+    public function isGet(): bool
     {
         return $this->method()==='get';
     }
-    public function isPost()
+    public function isPost(): bool
     {
         return $this->method()==='post';
     }
-    public function getBody(){
+    public function getBody(): array
+    {
         $body=[];
         if($this->method()==='get')
             foreach($_GET as $key=>$value){
@@ -39,6 +40,9 @@ class Request
             foreach($_GET as $key=>$value){
                 $body[$key]=filter_input(INPUT_POST,$key,FILTER_SANITIZE_SPECIAL_CHARS);
             }
+        echo "here";
+        var_dump($body);
+
         return $body;
     }
 

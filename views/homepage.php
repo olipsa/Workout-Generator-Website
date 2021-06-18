@@ -14,8 +14,8 @@
 <body>
 <header class="menu_bar">
     <div class="button_and_logo">
-        <a href="homepage.html" class="site-logo">
-            <img src="../logo_dark_mode.png" alt="logo">
+        <a href="/" class="site-logo">
+            <img src="../images/logo_dark_mode.png" alt="logo">
         </a>
             <a href="/login" class="menu_button">Login</a>
     </div>
@@ -39,14 +39,14 @@
 <main>
     <section class="hero_container">
         <div class="crop_container">
-            <img class="hero_image" src="../bgimage.jpg" alt="hero_image">
+            <img class="hero_image" src="../images/bgimage.jpg" alt="hero_image">
             <div class="hero_overlay">
                 <span class="hero_overlay_title">START YOUR JOURNEY TO A BETTER YOU</span>
                 <span class="hero_overlay_subtitle">
                 Generate Workouts Based On <span class="your">Your</span> Needs
             </span>
                 <div>
-                    <a href="../Register/register.html" class="get_started">
+                    <a href="/register" class="get_started">
                             Get Started
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                     </ul>
                 </div>
                 <div class="motivation_img">
-                    <img src="../workout.svg" alt="workout">
+                    <img src="../images/homepage/workout.svg" alt="workout">
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
         <div class="row--apply">
             <div class="benefits_container">
                 <div class="benefits_img">
-                    <img src="../energizer.svg" alt="energizer" width="301" height="274">
+                    <img src="../images/homepage/energizer.svg" alt="energizer" width="301" height="274">
                 </div>
                 <div class="benefits_text">
                     <h1>
@@ -104,7 +104,7 @@
                     </p>
                 </div>
                 <div class="support_img">
-                    <img src="../lifestyle.svg" alt="lifestyle" width="301" height="274">
+                    <img src="../images/homepage/lifestyle.svg" alt="lifestyle" width="301" height="274">
                 </div>
             </div>
         </div>

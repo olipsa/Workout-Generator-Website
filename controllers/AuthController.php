@@ -12,8 +12,10 @@ class AuthController extends Controller
         return Controller::render('login');
     }
     public function register(Request $request){
-        if($request->isPost())
+        if($request->isPost()){
             return 'Handle submitted data';
+        }
+
         else
             return Controller::render('register');
     }

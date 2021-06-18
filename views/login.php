@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../logo_dark_mode.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/images/logo_dark_mode.ico" type="image/x-icon"/>
     <title>Sign in | Fitter</title>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id"
@@ -19,19 +19,19 @@
 <div class="container">
     <header class="menu_bar">
         <div class="button_and_logo">
-            <a href="../Homepage/homepage.html" class="site-logo">
-                <img src="../logo_dark_mode.png" alt="logo">
+            <a href="/" class="site-logo">
+                <img src="../images/logo_dark_mode.png" alt="logo">
             </a>
                 <a href="../Homepage/homepage.html" class="menu_button">Home</a>
         </div>
     </header>
     <main>
 
-        <form class="login_form">
+        <form class="login_form" method="post">
             <h1 class="login_title"> Log In to Your Fitter Account</h1>
             <div class="new_user">
                 <span>Don't have an account?</span>
-                <a href="../Register/register.html" class="signup_link">Sign Up</a>
+                <a href="/register" class="signup_link">Sign Up</a>
             </div>
             <div class="container_login">
                 <section class="email_input_container">
@@ -58,7 +58,7 @@
                     </div>
                 </section>
 
-                <section class="button_container">
+                <section class="button_container" type="submit">
                     <a href="../WorkoutGen/Workout-Generator.html" class="login_button">
                             Log In
                     </a>
