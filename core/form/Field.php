@@ -42,12 +42,13 @@ class Field
             $this->attribute,
             $this->type,
             $this->attribute,
-            ($this->attribute==='email')?'Email Address':(($this->attribute==='pass')?'Password':'Confirm Password'),
+            ($this->attribute==='email')?'Email Address':(($this->attribute==='password')?'Password':'Confirm Password'),
             //$this->model->hasError($this->attribute)?' is-invalid':'',
             $this->model->getFirstError($this->attribute)
         );
     }
-    public function passwordField(){
+    public function passwordField(): Field
+    {
         $this->type=self::TYPE_PASSWORD;
         return $this;
     }

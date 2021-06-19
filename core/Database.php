@@ -3,14 +3,12 @@
 
 namespace core;
 
-
-use mysqli;
 use PDO;
 use PDOException;
 
 class Database
 {
-    public \PDO $pdo;
+    public PDO $pdo;
     /**
      * Database constructor.
      */
@@ -71,7 +69,7 @@ class Database
     {
         $statement=$this->pdo->prepare("SELECT migration FROM migrations");
         $statement->execute();
-        return $statement->fetchAll(\PDO::FETCH_COLUMN);
+        return $statement->fetchAll(PDO::FETCH_COLUMN);
     }
     public function saveMigrations(array $migrations){
         $str=implode(",",array_map(fn($m)=>"('$m')",$migrations));
