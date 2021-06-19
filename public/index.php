@@ -1,8 +1,14 @@
 <?php
 
+use models\User;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new core\Application(dirname(__DIR__));
+$config = [
+    'userClass' => User::class
+];
+
+$app = new core\Application(dirname(__DIR__), $config);
 $app->router->get('/', 'homepage');
 
 

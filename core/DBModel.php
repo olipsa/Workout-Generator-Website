@@ -10,6 +10,8 @@ abstract class DBModel extends Model
 
     abstract public function getAttributes(): array;
 
+    abstract public function getPrimaryKey(): string;
+
     public function save(): bool
     {
         $tableName = $this->getTableName();
@@ -40,8 +42,6 @@ abstract class DBModel extends Model
 
         $statement->execute();
         return $statement->fetchObject(static::class);
-
-
     }
 
     public static function prepare($sql)

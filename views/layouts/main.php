@@ -1,3 +1,5 @@
+<?php var_dump(\core\Application::$app->user); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
