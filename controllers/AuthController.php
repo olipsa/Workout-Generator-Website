@@ -9,13 +9,12 @@ use models\RegisterModel;
 class AuthController extends Controller
 {
     public function login(){
-        $this->setLayout('auth');
+        $this->setLayout('main');
         return Controller::render('login');
     }
     public function register(Request $request){
 
         $registerModel = new RegisterModel();
-
         if($request->isPost()){
             $registerModel->loadData($request->getBody());
 
@@ -27,7 +26,7 @@ class AuthController extends Controller
                 'model' => $registerModel
             ]);
         }
-        $this->setLayout('auth');
+        $this->setLayout('main');
         return Controller::render('register', [
             'model' => $registerModel
         ]);

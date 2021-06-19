@@ -7,8 +7,7 @@
     <style type="text/css">
         <?php include 'homepage.css'; ?>
     </style>
-    <link rel="shortcut icon" href="../logo_dark_mode.ico" type="image/x-icon"/>
-    <title>Home | Fitter</title>
+    <link rel="shortcut icon" href="../images/logo_dark_mode.ico" type="image/x-icon"/>
 </head>
 
 <body>

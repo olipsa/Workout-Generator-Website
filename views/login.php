@@ -12,19 +12,12 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style type="text/css">
         <?php include 'login.css'; ?>
+        <?php include 'header.css'; ?>
     </style>
 </head>
 
 <body>
 <div class="container">
-    <header class="menu_bar">
-        <div class="button_and_logo">
-            <a href="/" class="site-logo">
-                <img src="../images/logo_dark_mode.png" alt="logo">
-            </a>
-                <a href="../Homepage/homepage.html" class="menu_button">Home</a>
-        </div>
-    </header>
     <main>
 
         <form class="login_form" method="post">

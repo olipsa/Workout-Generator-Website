@@ -5,22 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
+        <?php include 'homepage.css'; ?>
         <?php include 'register.css'; ?>
     </style>
-    <link rel="shortcut icon" href="../images/logo_dark_mode.ico" type="image/x-icon"/>
     <title>Register | Fitter</title>
 </head>
-
-<body>
-<div class="container">
-    <header class="menu_bar">
-        <div class="button_and_logo">
-            <a href="/homepage" class="site-logo">
-                <img src="../images/logo_dark_mode.png" alt="logo">
-            </a>
-                <a href="../Homepage/homepage.html" class="menu_button">Home</a>
-        </div>
-    </header>
     <main>
         <?php  $form = \core\form\Form::begin("register_form","post")?>
         <h1 class="register_title"> Create Your Fitter Account</h1>
