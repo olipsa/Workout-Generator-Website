@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Workout generator</title>
-    <link rel="stylesheet" href="Workout-Generator.css">
+    <style type="text/css">
+        <?php include '../public/css/Workout-Generator.css'?>
+    </style>
     <link rel="shortcut icon" href="../logo_dark_mode.ico" type="image/x-icon" />
 </head>
 <body class="body" onload="javascript:chooseTheme()">
 <header class="header">
     <section class="top-menu">
         <a href="../../Frontend/Homepage/homepage.html" class="site-logo">
-            <img src="logo_dark_mode.png" alt="logo" >
+            <img src="../images/logo_dark_mode.png" alt="logo" >
         </a>
         <section class="profile-picture-container">
             <button class="profile-picture" onclick="showMenu()"></button>
@@ -116,7 +118,7 @@
                 <a href="../../Frontend/Dashboard/Dashboard.html">Statistics</a>
             </li>
             <li role="menuitem">
-                <a href="Workout-Generator.html">Workout generator</a>
+                <a href="Workout-Generator.php">Workout generator</a>
             </li>
             <li role="menuitem">
                 <a href="../../Frontend/AvailWorkouts/Available-Workouts.html">Available Workouts</a>

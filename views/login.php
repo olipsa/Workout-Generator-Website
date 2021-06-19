@@ -18,8 +18,8 @@ use models\User;
           content="410475989444-2f0aoqqc9sdhmqn7n88n9n9j87hmdqno.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style type="text/css">
-        <?php include 'login.css'; ?>
-        <?php include 'header.css'; ?>
+        <?php include '../public/css/login.css'; ?>
+        <?php include '../public/css/header.css'; ?>
     </style>
 </head>
 

@@ -12,7 +12,7 @@ $app = new core\Application(dirname(__DIR__), $config);
 $app->router->get('/', 'homepage');
 
 
-$app->router->get('/contact', 'contact');
+$app->router->get('/Workout-Generator', 'Workout-Generator');
 
 
 $app->router->get('/EmailConfirmation', 'EmailConfirmation');

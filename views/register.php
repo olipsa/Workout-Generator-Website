@@ -13,17 +13,18 @@ use models\User;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
-        <?php include 'homepage.css'; ?>
-        <?php include 'register.css'; ?>
+        <?php include '../public/css/register.css'; ?>
+        <?php include '../public/css/header.css'; ?>
     </style>
     <title>Register | Fitter</title>
 </head>
+<body>
     <main>
         <?php  $form = \core\form\Form::begin("register_form","post")?>
         <h1 class="register_title"> Create Your Fitter Account</h1>
         <div class="old_user">
             <span>Already have an account?</span>
-            <a href="../Login/login.html" class="signin_link">Sign In</a>
+            <a href="/login" class="signin_link">Sign In</a>
         </div>
         <div class="container_register">
             <?php echo $form->field($model, 'email') ?>

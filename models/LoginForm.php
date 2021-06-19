@@ -27,7 +27,7 @@ class LoginForm extends Model
             $this->addError('email','No user found under this email address');
             return false;
         }
-        if(password_verify($this->password,$user->password)){
+        if(!password_verify($this->password,$user->password)){
             $this->addError('password','Incorrect password');
             return false;
         }

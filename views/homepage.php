@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
-        <?php include 'homepage.css'; ?>
-        <?php include 'header.css'; ?>
+        <?php include '../public/css/homepage.css'; ?>
+        <?php include '../public/css/header.css'; ?>
     </style>
     <title>Home | Fitter</title>
 </head>

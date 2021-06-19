@@ -6,7 +6,7 @@ namespace core;
 
 class Controller
 {
-    public string $layout='main';
+    public string $layout='header';
     public function setLayout($layout){
         $this->layout=$layout;
     }

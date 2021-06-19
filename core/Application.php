@@ -36,6 +36,7 @@ class Application
     public function __construct($rootPath,$config)
     {
         $this->userClass = new User();
+
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->request = new Request();
@@ -60,7 +61,7 @@ class Application
         echo $this->router->resolve();
     }
 
-    public function login(DBModel $user)
+    public function login(DBModel $user): bool
     {
         $this->user = $user;
         $primaryKey = $user->getPrimaryKey();

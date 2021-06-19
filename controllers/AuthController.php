@@ -16,11 +16,11 @@ class AuthController extends Controller
         if($request->isPost()){
             $loginForm->loadData($request->getBody());
             if($loginForm->validate() && $loginForm->login()){
-                $response->redirect('/');
+                $response->redirect('/Workout-Generator');
                 return;
             }
         }
-        $this->setLayout('main');
+        $this->setLayout('header');
         return Controller::render('login', [
             'model'=> $loginForm
         ]);
@@ -40,7 +40,7 @@ class AuthController extends Controller
                 'model' => $user
             ]);
         }
-        $this->setLayout('main');
+        $this->setLayout('header');
         return Controller::render('register', [
             'model' => $user
         ]);
