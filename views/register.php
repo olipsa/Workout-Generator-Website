@@ -1,3 +1,11 @@
+<?php
+
+/** @var $model User */
+
+use models\User;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

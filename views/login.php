@@ -1,3 +1,10 @@
+<?php
+
+/** @var $model User */
+
+use models\User;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,25 +26,15 @@
 <body>
 <div class="container">
     <main>
-
-        <form class="login_form" method="post">
+        <?php  $form = \core\form\Form::begin("login_form","post")?>
             <h1 class="login_title"> Log In to Your Fitter Account</h1>
             <div class="new_user">
                 <span>Don't have an account?</span>
                 <a href="/register" class="signup_link">Sign Up</a>
             </div>
             <div class="container_login">
-                <section class="email_input_container">
-                    <label>
-                        <input class="email_input" type="email" name="email" placeholder="Email Address">
-                    </label>
-                </section>
-
-                <section class="pass_input_container">
-                    <label>
-                        <input class="pass_input" type="password" name="password" placeholder="Password">
-                    </label>
-                </section>
+                <?php echo $form->field($model, 'email') ?>
+                <?php echo $form->field($model, 'password')->passwordField() ?>
 
                 <section class="options">
                     <div>
@@ -52,9 +49,9 @@
                 </section>
 
                 <section class="button_container" type="submit">
-                    <a href="../WorkoutGen/Workout-Generator.html" class="login_button">
+                    <button  class="login_button">
                             Log In
-                    </a>
+                    </button>
                 </section>
 
                 <section class="TOS">
@@ -63,7 +60,7 @@
                     You also acknowledge that Fitter uses cookies to give the best user experience.
                 </section>
             </div>
-        </form>
+        <?php \core\form\Form::end()?>
     </main>
 </div>
 </body>
