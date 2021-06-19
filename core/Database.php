@@ -4,19 +4,20 @@
 namespace core;
 
 
+use mysqli;
 use PDO;
 use PDOException;
 
 class Database
 {
-    public \PDO $conn;
+    public mysqli $dbconn;
     /**
      * Database constructor.
      */
     public function __construct()
     {
 
-            $dbconn = new \mysqli("localhost","root","root","proiecttw");
+            $dbconn = new mysqli("localhost","root","root","proiecttw");
 
     }
 }
