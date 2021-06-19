@@ -10,19 +10,20 @@ abstract class DBModel extends Model
 
     abstract public function getAttributes(): array;
 
-    public function save()
+    public function save(): bool
     {
         $tableName = $this->getTableName();
         $attributes = $this->getAttributes();
-        $params = array_map(fn($attr)=>":attr", $attributes);
+        $params = array_map(fn($attr)=>":$attr", $attributes);
         $statement = self::prepare("INSERT INTO $tableName (".implode(',',$attributes).")
                 VALUES(".implode(',',$params).")");
-        var_dump($statement,$params,$attributes);
         foreach ($attributes as $attribute)
         {
             $statement->bindValue(":$attribute",$this->{$attribute});
         }
-
+        echo '<pre>';
+        var_dump($statement);
+        echo '</pre>';
         $statement->execute();
         return true;
     }

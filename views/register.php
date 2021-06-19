@@ -19,7 +19,7 @@
         </div>
         <div class="container_register">
             <?php echo $form->field($model, 'email') ?>
-            <?php echo $form->field($model, 'pass')->passwordField() ?>
+            <?php echo $form->field($model, 'password')->passwordField() ?>
             <?php echo $form->field($model, 'confirmPass')->passwordField() ?>
             <section class="button_container" type="submit">
                 <button class="register_button">

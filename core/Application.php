@@ -10,6 +10,7 @@ class Application
     public Response $response;
     public Database $db;
     public static Application $app;
+    public Session $session;
     public Controller $controller;
 
     /**
@@ -36,6 +37,7 @@ class Application
         $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
         $this->controller = new Controller();
+        $this->session = new Session();
 
         $this->db = new Database();
     }

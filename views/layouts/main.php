@@ -35,4 +35,9 @@
         </ul>
     </nav>
 </header>
+<?php if (\core\Application::$app->session->getFlash('success')): ?>
+<div class="alert alert-success">
+    <?php echo \core\Application::$app->session->getFlash('success')?>
+</div>
+<?php endif?>
 {{content}}
